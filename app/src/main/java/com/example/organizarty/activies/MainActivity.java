@@ -1,8 +1,10 @@
-package com.example.organizarty;
+package com.example.organizarty.activies;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.organizarty.R;
 
 public class MainActivity extends AppCompatActivity {
 
