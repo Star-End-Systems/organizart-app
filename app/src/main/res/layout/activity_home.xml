@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activies.HomeActivity">
+
+    <ImageView
+        android:id="@+id/img_usuario"
+        android:layout_width="51dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/user_login"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/txt_welcome"
+        android:layout_width="95dp"
+        android:layout_height="19dp"
+        android:text="Bem-vindo(a),"
+        app:layout_constraintBottom_toBottomOf="@+id/img_usuario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.243"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_usuario"
+        app:layout_constraintVertical_bias="0.466" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="95dp"
+        android:layout_height="19sp"
+        android:layout_marginEnd="136dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Débora!"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_welcome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="@+id/img_usuario"
+        app:layout_constraintTop_toTopOf="@+id/txt_welcome"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txt_festas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:fontFamily="@font/inter_bold"
+        android:text="Suas festas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="173dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#00FFFFFF"
+        android:scaleType="center"
+        android:src="@drawable/botao_criarconta"
+        tools:layout_editor_absoluteX="211dp"
+        tools:layout_editor_absoluteY="101dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
