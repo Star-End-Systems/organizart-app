@@ -13,13 +13,24 @@
         android:fontFamily="@font/inter_black"
         android:text="Login"
         android:textColor="#E91E63"
-        android:textSize="52dp"
+        android:textSize="45dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.211" />
+        app:layout_constraintVertical_bias="0.278" />
+
+    <ImageView
+        android:id="@+id/img_linha"
+        android:layout_width="36dp"
+        android:layout_height="12dp"
+        android:src="@drawable/enfeite_login"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/lbl_login"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/lbl_login"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_login"
+        app:layout_constraintVertical_bias="0.002" />
 
     <ImageView
         android:id="@+id/img_user"
@@ -29,25 +40,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.09"
+        app:layout_constraintVertical_bias="0.145"
         app:srcCompat="@drawable/user_login" />
-
-    <ImageView
-        android:id="@+id/img_linha"
-        android:layout_width="47dp"
-        android:layout_height="9dp"
-        android:src="@drawable/enfeite_login"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/lbl_login"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/lbl_login"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_login"
-        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/txt_email"
         android:layout_width="0dp"
-        android:layout_height="58dp"
+        android:layout_height="48dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:background="@drawable/edittext_background"
@@ -64,12 +63,12 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.42" />
+        app:layout_constraintVertical_bias="0.458" />
 
     <EditText
         android:id="@+id/txt_senha"
         android:layout_width="0dp"
-        android:layout_height="58dp"
+        android:layout_height="48dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="64dp"
         android:background="@drawable/edittext_background"
@@ -85,8 +84,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lbl_login"
-        app:layout_constraintVertical_bias="0.348" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.579" />
 
     <TextView
         android:id="@+id/lbl_senha"
@@ -97,36 +96,36 @@
         android:textSize="14dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/txt_senha"
-        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintHorizontal_bias="0.918"
         app:layout_constraintStart_toStartOf="@+id/txt_senha"
         app:layout_constraintTop_toBottomOf="@+id/txt_senha"
-        app:layout_constraintVertical_bias="0.089" />
+        app:layout_constraintVertical_bias="0.069" />
 
     <ImageButton
         android:id="@+id/btn_criar"
-        android:layout_width="143dp"
-        android:layout_height="74dp"
+        android:layout_width="133dp"
+        android:layout_height="64dp"
         android:backgroundTint="#FFFFFF"
         android:src="@drawable/botao_criarconta"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.742"
+        app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.783" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <ImageButton
         android:id="@+id/btn_sing"
-        android:layout_width="143dp"
-        android:layout_height="74dp"
+        android:layout_width="133dp"
+        android:layout_height="64dp"
         android:backgroundTint="#FFFFFF"
         android:src="@drawable/botao_sing_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.208"
+        app:layout_constraintHorizontal_bias="0.197"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.783" />
+        app:layout_constraintVertical_bias="0.787" />
 
     <TextView
         android:id="@+id/lbl_sing"
@@ -135,7 +134,7 @@
         android:fontFamily="@font/inter_bold"
         android:text="SING IN"
         android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_sing"
         app:layout_constraintEnd_toEndOf="@+id/btn_sing"
         app:layout_constraintStart_toStartOf="@+id/btn_sing"
@@ -148,7 +147,7 @@
         android:fontFamily="@font/inter_bold"
         android:text="Criar conta"
         android:textColor="#FF3367"
-        android:textSize="16sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_criar"
         app:layout_constraintEnd_toEndOf="@+id/btn_criar"
         app:layout_constraintStart_toStartOf="@+id/btn_criar"
