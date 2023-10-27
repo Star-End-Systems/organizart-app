@@ -47,7 +47,7 @@
         android:layout_height="44dp"
         android:layout_marginEnd="15dp"
         android:contentDescription="@string/app_name"
-        android:src="@drawable/mico"
+        android:src="@drawable/maco"
         app:layout_constraintBottom_toBottomOf="@id/textHello"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/textHello" />
@@ -102,7 +102,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
