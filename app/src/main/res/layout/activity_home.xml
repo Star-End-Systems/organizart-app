@@ -100,7 +100,94 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/titulo1"
+                android:textColor="#c4c4c4"
+                android:fontFamily="@font/inter_bold"
+                android:layout_marginRight="240dp" />
+
+            <LinearLayout
+                android:id="@+id/layoutUrso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#A882B5"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/fest1_roxo"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="15dp"
+                app:circularflow_defaultRadius="@dimen/cardview_compat_inset_shadow"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/layoutDrink"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/urso" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/nomefesta1"
+                    android:fontFamily="@font/inter"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutDrink"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fest2_verde"
+                android:layout_marginTop="22dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@id/layoutUrso"
+                android:padding="15dp"
+                app:layout_constraintDimensionRatio="H,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="8dp"
+                    android:contentDescription="@string/app_name"
+                    android:padding="8dp"
+                    android:src="@drawable/drink"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/nomefesta2"
+                    android:fontFamily="@font/inter"
+                    android:textColor="#ffffffff"
+                    android:textSize="14sp" />
+
+
+
+
+
+            </LinearLayout>
 
 
 

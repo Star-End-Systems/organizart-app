@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">OrganiZarty</string>
+    <string name="titulo1">Suas Festas</string>
+
+    <string name="nomefesta1">Chá de Fraudas</string>
+    <string name="nomefesta2">Festa da Empresa</string>
+
+    <string name="data1">30/11/2023</string>
+    <string name="data2">15/11/2023</string>
+
+    <string name="tipofesta1">Chá de Bebê</string>
+    <string name="tipofesta2">Happy Hour</string>
+
+
 </resources>
