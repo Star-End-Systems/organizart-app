@@ -106,7 +106,7 @@
         app:srcCompat="@drawable/white_background" />
 
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/img_negado"
         android:layout_width="326dp"
         android:layout_height="90dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -115,19 +115,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.067"
-        app:srcCompat="@drawable/pedidos" />
+        app:srcCompat="@drawable/pedidos_negados" />
 
     <ImageView
-        android:id="@+id/imageView16"
+        android:id="@+id/img_aceito"
         android:layout_width="326dp"
-        android:layout_height="90dp"
+        android:layout_height="85dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView15"
+        app:layout_constraintTop_toBottomOf="@+id/img_negado"
         app:layout_constraintVertical_bias="0.051"
-        app:srcCompat="@drawable/pedidos" />
+        app:srcCompat="@drawable/pedidos_aceitos" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -287,8 +287,8 @@
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="168dp"
-        android:layout_height="41dp"
+        android:layout_width="183dp"
+        android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -301,13 +301,13 @@
         android:id="@+id/imageView22"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
-        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/img_negado"
+        app:layout_constraintEnd_toEndOf="@+id/img_negado"
         app:layout_constraintHorizontal_bias="0.032"
-        app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/img_negado"
+        app:layout_constraintTop_toTopOf="@+id/img_negado"
         app:layout_constraintVertical_bias="0.103"
-        app:srcCompat="@drawable/negado" />
+        app:srcCompat="@drawable/x" />
 
     <TextView
         android:id="@+id/textView9"
@@ -318,22 +318,22 @@
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
-        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/img_negado"
+        app:layout_constraintEnd_toEndOf="@+id/img_negado"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/imageView22"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="@+id/img_negado"
         app:layout_constraintVertical_bias="0.113" />
 
     <ImageView
         android:id="@+id/imageView23"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
-        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_aceito"
+        app:layout_constraintEnd_toEndOf="@+id/img_aceito"
         app:layout_constraintHorizontal_bias="0.032"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintStart_toStartOf="@+id/img_aceito"
+        app:layout_constraintTop_toTopOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.103"
         app:srcCompat="@drawable/aceito" />
 
@@ -345,11 +345,11 @@
         android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
-        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_aceito"
+        app:layout_constraintEnd_toEndOf="@+id/img_aceito"
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toEndOf="@+id/imageView23"
-        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.113" />
 
     <TextView
@@ -359,11 +359,11 @@
         android:text="Produto: Toalha azul de mesa redonda"
         android:textColor="@color/white"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
-        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/img_negado"
+        app:layout_constraintEnd_toEndOf="@+id/img_negado"
         app:layout_constraintHorizontal_bias="0.072"
-        app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/img_negado"
+        app:layout_constraintTop_toTopOf="@+id/img_negado"
         app:layout_constraintVertical_bias="0.467" />
 
     <TextView
@@ -373,22 +373,22 @@
         android:text="Motivo: Sem estoque"
         android:textColor="@color/white"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
-        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/img_negado"
+        app:layout_constraintEnd_toEndOf="@+id/img_negado"
         app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/img_negado"
+        app:layout_constraintTop_toTopOf="@+id/img_negado"
         app:layout_constraintVertical_bias="0.63" />
 
     <ImageView
         android:id="@+id/imageView24"
         android:layout_width="53dp"
         android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
-        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/img_negado"
+        app:layout_constraintEnd_toEndOf="@+id/img_negado"
         app:layout_constraintHorizontal_bias="0.848"
-        app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/img_negado"
+        app:layout_constraintTop_toTopOf="@+id/img_negado"
         app:layout_constraintVertical_bias="0.254"
         app:srcCompat="@drawable/me_re" />
 
@@ -399,11 +399,11 @@
         android:text="6/11/2023 ás 14:30"
         android:textColor="@color/white"
         android:textSize="9sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
-        app:layout_constraintEnd_toEndOf="@+id/imageView15"
+        app:layout_constraintBottom_toBottomOf="@+id/img_negado"
+        app:layout_constraintEnd_toEndOf="@+id/img_negado"
         app:layout_constraintHorizontal_bias="0.881"
-        app:layout_constraintStart_toStartOf="@+id/imageView15"
-        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintStart_toStartOf="@+id/img_negado"
+        app:layout_constraintTop_toTopOf="@+id/img_negado"
         app:layout_constraintVertical_bias="0.755" />
 
     <TextView
@@ -413,11 +413,11 @@
         android:text="Produto: Balão de ar azul"
         android:textColor="@color/white"
         android:textSize="11sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
-        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_aceito"
+        app:layout_constraintEnd_toEndOf="@+id/img_aceito"
         app:layout_constraintHorizontal_bias="0.049"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintStart_toStartOf="@+id/img_aceito"
+        app:layout_constraintTop_toTopOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.493" />
 
     <TextView
@@ -427,22 +427,22 @@
         android:text="6/11/2023 as 16:40"
         android:textColor="@color/white"
         android:textSize="9sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
-        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_aceito"
+        app:layout_constraintEnd_toEndOf="@+id/img_aceito"
         app:layout_constraintHorizontal_bias="0.875"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintStart_toStartOf="@+id/img_aceito"
+        app:layout_constraintTop_toTopOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.883" />
 
     <ImageView
         android:id="@+id/imageView25"
         android:layout_width="53dp"
         android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
-        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintBottom_toBottomOf="@+id/img_aceito"
+        app:layout_constraintEnd_toEndOf="@+id/img_aceito"
         app:layout_constraintHorizontal_bias="0.849"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintStart_toStartOf="@+id/img_aceito"
+        app:layout_constraintTop_toTopOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.184"
         app:srcCompat="@drawable/balao" />
 
@@ -453,8 +453,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView16"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintStart_toStartOf="@+id/img_aceito"
+        app:layout_constraintTop_toBottomOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.24"
         app:srcCompat="@drawable/circulo" />
 
@@ -464,10 +464,10 @@
         android:layout_height="53dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView16"
+        app:layout_constraintEnd_toEndOf="@+id/img_aceito"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toEndOf="@+id/imageView40"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.24"
         app:srcCompat="@drawable/circulo" />
 
@@ -480,7 +480,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.076"
         app:layout_constraintStart_toEndOf="@+id/imageView39"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.24"
         app:srcCompat="@drawable/circulo" />
 
@@ -493,7 +493,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.058"
         app:layout_constraintStart_toEndOf="@+id/imageView38"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.24"
         app:srcCompat="@drawable/circulo" />
 
@@ -506,9 +506,128 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.015"
         app:layout_constraintStart_toEndOf="@+id/imageView26"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16"
+        app:layout_constraintTop_toBottomOf="@+id/img_aceito"
         app:layout_constraintVertical_bias="0.24"
         app:srcCompat="@drawable/circulo" />
+
+    <ImageView
+        android:id="@+id/imageView43"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+        app:layout_constraintEnd_toEndOf="@+id/imageView26"
+        app:layout_constraintStart_toStartOf="@+id/imageView26"
+        app:layout_constraintTop_toTopOf="@+id/imageView26"
+        app:srcCompat="@drawable/ic_urso" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView38"
+        app:layout_constraintEnd_toEndOf="@+id/imageView38"
+        app:layout_constraintStart_toStartOf="@+id/imageView38"
+        app:layout_constraintTop_toTopOf="@+id/imageView38"
+        app:srcCompat="@drawable/ic_coracao" />
+
+    <ImageView
+        android:id="@+id/imageView46"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView39"
+        app:layout_constraintEnd_toEndOf="@+id/imageView39"
+        app:layout_constraintStart_toStartOf="@+id/imageView39"
+        app:layout_constraintTop_toTopOf="@+id/imageView39"
+        app:srcCompat="@drawable/ic_coroa" />
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView40"
+        app:layout_constraintEnd_toEndOf="@+id/imageView40"
+        app:layout_constraintStart_toStartOf="@+id/imageView40"
+        app:layout_constraintTop_toTopOf="@+id/imageView40"
+        app:srcCompat="@drawable/ic_coquetel" />
+
+    <ImageView
+        android:id="@+id/imageView48"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView41"
+        app:layout_constraintEnd_toEndOf="@+id/imageView41"
+        app:layout_constraintStart_toStartOf="@+id/imageView41"
+        app:layout_constraintTop_toTopOf="@+id/imageView41"
+        app:srcCompat="@drawable/ic_bolo" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chá de bebê"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView26"
+        app:layout_constraintHorizontal_bias="0.222"
+        app:layout_constraintStart_toStartOf="@+id/imageView26"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Happy Hour"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView40"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="@+id/imageView40"
+        app:layout_constraintTop_toBottomOf="@+id/imageView40"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15 anos"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView39"
+        app:layout_constraintHorizontal_bias="0.625"
+        app:layout_constraintStart_toStartOf="@+id/imageView39"
+        app:layout_constraintTop_toBottomOf="@+id/imageView39"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Casamento"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView38"
+        app:layout_constraintStart_toStartOf="@+id/imageView38"
+        app:layout_constraintTop_toBottomOf="@+id/imageView38"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aniversário"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView41"
+        app:layout_constraintHorizontal_bias="0.636"
+        app:layout_constraintStart_toStartOf="@+id/imageView41"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
