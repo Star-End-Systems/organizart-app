@@ -13,7 +13,7 @@
         android:theme="@style/webViewFullScreen"
         tools:targetApi="31">
         <activity
-            android:name=".activies.HomeActivity"
+            android:name=".activies.app.main.views.activities.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".activies.LoginActivity"
