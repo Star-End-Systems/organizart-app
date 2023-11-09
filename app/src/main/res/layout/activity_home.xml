@@ -19,10 +19,22 @@
         android:padding="10dp"
         app:layout_constraintTop_toTopOf="parent">
 
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/logo_organizarty_white"
+            app:layout_constraintBottom_toBottomOf="@+id/textHello"
+            app:layout_constraintEnd_toStartOf="@+id/textHello"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textHello" />
+
         <TextView
             android:id="@+id/textUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="18dp"
             android:fontFamily="@font/inter_bold"
@@ -37,7 +49,7 @@
             android:id="@+id/textHello"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
+            android:layout_marginStart="70dp"
             android:layout_marginTop="18dp"
             android:fontFamily="@font/inter"
             android:text="Olá,"
@@ -48,15 +60,17 @@
 
         <ImageView
             android:id="@+id/imageUser"
-            android:layout_width="52dp"
-            android:layout_height="52dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="3dp"
             android:contentDescription="@string/app_name"
-            app:layout_constraintBottom_toBottomOf="@id/textHello"
+            android:src="@drawable/menus"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.986"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toEndOf="@+id/textUsername"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.6" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -65,30 +79,29 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="409dp"
-            android:layout_height="600dp"
+            android:id="@+id/constraintLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
             android:layout_marginTop="1dp"
             android:layout_marginEnd="1dp"
-            android:layout_marginBottom="1dp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/lbl_festas"
-                android:layout_width="100dp"
-                android:layout_height="24dp"
-                android:fontFamily="@font/inter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:fontFamily="@font/inter_extrabold"
                 android:text="Suas festas"
                 android:textColor="#B0AAAA"
                 android:textSize="16sp"
-                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.103"
@@ -96,10 +109,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView3"
                 app:layout_constraintVertical_bias="0.068" />
 
+
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="212dp"
                 android:layout_height="50dp"
+                android:layout_marginTop="4dp"
                 android:src="@drawable/or_gani"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -136,121 +151,181 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="3dp"
                     android:orientation="horizontal">
 
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
+                        android:layout_width="161dp"
+                        android:layout_height="93dp"
                         android:layout_margin="20dp"
                         app:cardBackgroundColor="#A882B5"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+
+                        <ImageView
+                            android:layout_width="83dp"
+                            android:layout_height="83dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/urso" />
+
+                        <ImageView
+                            android:layout_width="161dp"
+                            android:layout_height="93dp"
+                            android:src="@drawable/fundo_p" />
+
+                        <TextView
+                            android:id="@+id/nome_festa"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="53dp"
+                            android:fontFamily="@font/inter_extrabold"
+                            android:text="Chá de fraudas"
+                            android:textColor="@color/white" />
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="6dp"
-                                android:src="@drawable/urso" />
+                        <TextView
+                            android:id="@+id/tipo_festa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="70dp"
+                            android:text="Chá de bebê"
+                            android:textColor="#AFA9A9"
+                            android:textSize="5dp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="18dp"
-                                android:layout_marginTop="3dp"
-                                android:text="Chá de Frauda"
-                                android:textColor="@color/white"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/data_festa"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="104dp"
+                            android:layout_marginTop="78dp"
+                            android:text="30/11/2023"
+                            android:textColor="#AFA9A9"
+                            android:textSize="8dp" />
 
-                        </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
+                        android:layout_width="161dp"
+                        android:layout_height="93dp"
                         android:layout_margin="20dp"
                         app:cardBackgroundColor="#12eb4d"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+
+                        <ImageView
+                            android:layout_width="83dp"
+                            android:layout_height="83dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/drink" />
+
+                        <ImageView
+                            android:layout_width="161dp"
+                            android:layout_height="93dp"
+                            android:src="@drawable/fundo_p" />
+
+                        <TextView
+                            android:id="@+id/nome_festa2"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="53dp"
+                            android:fontFamily="@font/inter_extrabold"
+                            android:text="Festa da empresa"
+                            android:textColor="@color/white" />
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="6dp"
-                                android:src="@drawable/drink" />
+                        <TextView
+                            android:id="@+id/tipo_festa2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="70dp"
+                            android:text="Happy hour"
+                            android:textColor="#AFA9A9"
+                            android:textSize="5dp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="18dp"
-                                android:layout_marginTop="3dp"
-                                android:text="Empresa party"
-                                android:textColor="@color/white"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/data_festa2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="104dp"
+                            android:layout_marginTop="78dp"
+                            android:text="30/11/2023"
+                            android:textColor="#AFA9A9"
+                            android:textSize="8dp" />
 
-                        </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
+                        android:layout_width="161dp"
+                        android:layout_height="93dp"
                         android:layout_margin="20dp"
                         app:cardBackgroundColor="#FF0A83"
                         app:cardCornerRadius="20dp"
                         app:cardElevation="10dp">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
+
+                        <ImageView
+                            android:layout_width="83dp"
+                            android:layout_height="83dp"
+                            android:layout_marginLeft="40dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/bolo" />
+
+                        <ImageView
+                            android:layout_width="161dp"
+                            android:layout_height="93dp"
+                            android:src="@drawable/fundo_p" />
+
+                        <TextView
+                            android:id="@+id/nome_festa3"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical">
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="53dp"
+                            android:fontFamily="@font/inter_extrabold"
+                            android:text="Meu níver"
+                            android:textColor="@color/white" />
 
-                            <ImageView
-                                android:layout_width="80dp"
-                                android:layout_height="80dp"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginTop="6dp"
-                                android:src="@drawable/bolo" />
+                        <TextView
+                            android:id="@+id/tipo_festa3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginTop="70dp"
+                            android:text="Aniversário"
+                            android:textColor="#AFA9A9"
+                            android:textSize="5dp" />
 
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="18dp"
-                                android:layout_marginTop="3dp"
-                                android:text="Meu níver"
-                                android:textColor="@color/white"
-                                android:textSize="14sp"
-                                android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/data_festa3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="104dp"
+                            android:layout_marginTop="78dp"
+                            android:text="30/11/2023"
+                            android:textColor="#AFA9A9"
+                            android:textSize="8dp" />
 
-                        </LinearLayout>
 
                     </androidx.cardview.widget.CardView>
-
                 </LinearLayout>
             </HorizontalScrollView>
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout"
                 android:layout_width="407dp"
-                android:layout_height="273dp"
-                android:layout_marginStart="1dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="1dp"
+                android:layout_height="206dp"
+                android:foregroundGravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -260,40 +335,39 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView"
                     android:layout_width="250dp"
-                    android:layout_height="80dp"
+                    android:layout_height="65dp"
                     android:layout_margin="20dp"
                     app:cardBackgroundColor="#E05252"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="10dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.496"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0">
+                    app:layout_constraintVertical_bias="0.255">
 
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_marginTop="12dp"
                         android:layout_marginLeft="12dp"
-                        android:src="@drawable/x"/>
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/x" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="12dp"
+                        android:fontFamily="@font/inter_bold"
                         android:text="Pedido negado"
                         android:textColor="@color/white"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/inter_bold"/>
+                        android:textSize="12sp" />
 
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="250dp"
-                    android:layout_height="80dp"
+                    android:layout_height="65dp"
                     android:layout_margin="20dp"
                     android:layout_marginTop="2dp"
                     app:cardBackgroundColor="#2AD861"
@@ -309,27 +383,90 @@
                     <ImageView
                         android:layout_width="20dp"
                         android:layout_height="20dp"
-                        android:layout_marginTop="12dp"
                         android:layout_marginLeft="12dp"
-                        android:src="@drawable/aceito"/>
+                        android:layout_marginTop="12dp"
+                        android:src="@drawable/aceito" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="12dp"
+                        android:fontFamily="@font/inter_bold"
                         android:text="Pedido aceito"
                         android:textColor="@color/white"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/inter_bold"/>
+                        android:textSize="12sp" />
 
                 </androidx.cardview.widget.CardView>
 
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Atualizações dos pedidos!"
+                    android:textColor="#BEBEBE"
+                    app:layout_constraintBottom_toTopOf="@+id/cardView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="409dp"
+            android:layout_height="145dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="51dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.132"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.297" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_urso"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                app:layout_constraintStart_toStartOf="@+id/imageView7"
+                app:layout_constraintTop_toTopOf="@+id/imageView7" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="51dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Chá de bebê"
+                android:textAlignment="center"
+                android:textSize="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageView7"
+                app:layout_constraintHorizontal_bias="0.47"
+                app:layout_constraintStart_toStartOf="@+id/imageView7"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
