@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import com.example.organizarty.R;
+import com.example.organizarty.activies.app.main.views.activities.HomeActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
