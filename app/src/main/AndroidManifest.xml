@@ -13,6 +13,9 @@
         android:theme="@style/webViewFullScreen"
         tools:targetApi="31">
         <activity
+            android:name=".EmptyHome"
+            android:exported="false" />
+        <activity
             android:name=".activies.YourOrders"
             android:exported="false" />
         <activity

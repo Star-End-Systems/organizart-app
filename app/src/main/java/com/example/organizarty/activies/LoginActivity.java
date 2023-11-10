@@ -6,13 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
+import com.example.organizarty.EmptyHome;
 import com.example.organizarty.R;
 import com.example.organizarty.activies.app.main.views.activities.HomeActivity;
 
 public class LoginActivity extends AppCompatActivity {
 
     ImageButton SingIn;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,5 +31,8 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
-
+    public void gotoEmptyHome(View v){
+        Intent intent = new Intent(this, EmptyHome.class);
+        startActivity(intent);
+    }
 }
