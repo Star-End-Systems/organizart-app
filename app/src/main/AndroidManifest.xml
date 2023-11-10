@@ -13,6 +13,12 @@
         android:theme="@style/webViewFullScreen"
         tools:targetApi="31">
         <activity
+            android:name=".activies.ShowMoreParty"
+            android:exported="false" />
+        <activity
+            android:name=".activies.PartyDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".activies.app.main.views.activities.HomeActivity"
             android:exported="false" />
         <activity
