@@ -23,7 +23,7 @@
             android:id="@+id/imageView2"
             android:layout_width="42dp"
             android:layout_height="42dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="4dp"
             android:src="@drawable/logo_organizarty_white"
             app:layout_constraintBottom_toBottomOf="@+id/textHello"
             app:layout_constraintEnd_toStartOf="@+id/textHello"
@@ -151,7 +151,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
+                    android:layout_marginLeft="0dp"
                     android:layout_marginRight="3dp"
                     android:orientation="horizontal">
 
@@ -335,7 +335,7 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView"
                     android:layout_width="250dp"
-                    android:layout_height="65dp"
+                    android:layout_height="75dp"
                     android:layout_margin="20dp"
                     app:cardBackgroundColor="#E05252"
                     app:cardCornerRadius="20dp"
@@ -363,13 +363,37 @@
                         android:textColor="@color/white"
                         android:textSize="12sp" />
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="35dp"
+                        android:text="Produto: Toalha de mesa redonda"
+                        android:textColor="@color/white"
+                        android:textSize="9dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="50dp"
+                        android:text="Motivo: Sem estoque"
+                        android:textColor="@color/white"
+                        android:textSize="9dp" />
+
+                    <ImageView
+                        android:layout_width="41dp"
+                        android:layout_height="41dp"
+                        android:layout_marginLeft="175dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_mesa" />
+
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="250dp"
-                    android:layout_height="65dp"
+                    android:layout_height="75dp"
                     android:layout_margin="20dp"
-                    android:layout_marginTop="2dp"
                     app:cardBackgroundColor="#2AD861"
                     app:cardCornerRadius="20dp"
                     app:cardElevation="10dp"
@@ -378,7 +402,7 @@
                     app:layout_constraintHorizontal_bias="0.496"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/cardView"
-                    app:layout_constraintVertical_bias="0.0">
+                    app:layout_constraintVertical_bias="0.538">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -396,6 +420,24 @@
                         android:text="Pedido aceito"
                         android:textColor="@color/white"
                         android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="35dp"
+                        android:text="Produto: Balão de ar azul"
+                        android:textColor="@color/white"
+                        android:textSize="9dp" />
+
+
+
+                    <ImageView
+                        android:layout_width="41dp"
+                        android:layout_height="41dp"
+                        android:layout_marginLeft="175dp"
+                        android:layout_marginTop="20dp"
+                        android:src="@drawable/ic_balao" />
 
                 </androidx.cardview.widget.CardView>
 
