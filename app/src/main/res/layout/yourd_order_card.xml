@@ -6,8 +6,8 @@
     android:layout_height="match_parent">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="363dp"
-        android:layout_height="94dp"
+        android:layout_width="236dp"
+        android:layout_height="172dp"
         android:layout_rowWeight="1"
         android:layout_columnWeight="1"
         android:layout_margin="12dp"
@@ -19,56 +19,107 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/img_pokemon"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="24dp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/imageView12"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginStart="1dp"
+                android:layout_marginEnd="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.491"
-                app:srcCompat="@drawable/urso" />
+                app:srcCompat="@drawable/pedidos_aceitos" />
 
             <TextView
-                android:id="@+id/pokemon_number"
-                android:layout_width="wrap_content"
+                android:id="@+id/textView12"
+                android:layout_width="169dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginTop="8dp"
                 android:fontFamily="@font/inter"
-                android:text="Chá de bebe"
-                android:textColor="#B7B7B7"
-                android:textSize="5dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="@+id/img_pokemon"
-                app:layout_constraintStart_toStartOf="@+id/pokemon_name"
-                app:layout_constraintTop_toBottomOf="@+id/pokemon_name"
-                app:layout_constraintVertical_bias="0.0" />
-
-            <TextView
-                android:id="@+id/pokemon_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:fontFamily="@font/inter_extrabold"
-                android:text="Chá de Frauda"
-                android:textColor="#808080"
-                android:textSize="16dp"
-                app:layout_constraintStart_toEndOf="@+id/img_pokemon"
-                tools:layout_editor_absoluteY="46dp" />
-
-            <TextView
-                android:id="@+id/pokemon_name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/inter_extrabold"
-                android:text="30/11/2023"
-                android:textColor="#B5B5B5"
-                android:textSize="10dp"
+                android:gravity="center|center_vertical"
+                android:text="Toalha azul de mesa redonda"
+                android:textColor="#FFFFFF"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.761"
-                app:layout_constraintStart_toEndOf="@+id/pokemon_name"
-                tools:layout_editor_absoluteY="46dp" />
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="@+id/imageView12"
+                app:layout_constraintTop_toBottomOf="@+id/img_pokemon" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/inter"
+                android:gravity="center|center_horizontal|center_vertical"
+                android:text="Alguma coisa: muito doida"
+                android:textColor="#FFFFFF"
+                android:textSize="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
+                app:layout_constraintStart_toStartOf="@+id/imageView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <ImageView
+                android:id="@+id/img_pokemon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toTopOf="@+id/imageView12"
+                app:srcCompat="@drawable/ic_mesa"
+                tools:layout_editor_absoluteX="107dp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/inter"
+                android:text="Situação: "
+                android:textColor="#7D7D7D"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter"
+                android:text="Tipo:"
+                android:textColor="#7D7D7D"
+                android:textSize="12dp"
+                app:layout_constraintEnd_toEndOf="@+id/textView17"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter"
+                android:text="Decoração"
+                android:textColor="#7D7D7D"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/textView18"
+                app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:fontFamily="@font/inter"
+                android:text="ACEITADO"
+                android:textColor="#4CAF50"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/textView17"
+                app:layout_constraintTop_toTopOf="@+id/textView17" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
