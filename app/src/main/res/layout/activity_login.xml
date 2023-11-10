@@ -87,20 +87,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.579" />
 
-    <TextView
-        android:id="@+id/lbl_senha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Forgot password?"
-        android:textColor="#C9686767"
-        android:textSize="14dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txt_senha"
-        app:layout_constraintHorizontal_bias="0.918"
-        app:layout_constraintStart_toStartOf="@+id/txt_senha"
-        app:layout_constraintTop_toBottomOf="@+id/txt_senha"
-        app:layout_constraintVertical_bias="0.069" />
-
     <ImageButton
         android:id="@+id/btn_criar"
         android:layout_width="133dp"

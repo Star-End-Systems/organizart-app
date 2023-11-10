@@ -10,10 +10,8 @@
         android:id="@+id/layoutHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="662dp"
         android:background="@drawable/header_background"
         android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -80,8 +78,6 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="1dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
@@ -90,45 +86,42 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="Detalhes Festa"
-            android:textColor="#4B4D53"
+            android:textColor="#848484"
             android:textSize="25dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/img_linha"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
             android:layout_marginTop="24dp"
-            android:layout_marginEnd="123dp"
             android:fontFamily="@font/inter_extrabold"
-            android:text="Festa de Frauda"
-            android:textColor="#2A2A2A"
+            android:text="Chá de Frauda"
+            android:textColor="#9F9D9D"
             android:textSize="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintHorizontal_bias="0.416"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/img_linha" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="120dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="123dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="Cha de bebe"
             android:textColor="#848484"
             android:textSize="14dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/textView7"
             app:layout_constraintHorizontal_bias="0.515"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView7"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
         <TextView
@@ -136,12 +129,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
-            android:layout_marginBottom="16dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="Categoria"
             android:textColor="#2C2C2C"
             android:textSize="14dp"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+            app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
@@ -151,7 +143,7 @@
             android:layout_marginStart="56dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/inter_extrabold"
-            android:text="Quantidade"
+            android:text="Status"
             android:textColor="#2C2C2C"
             android:textSize="14dp"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
@@ -164,12 +156,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="64dp"
-            android:layout_marginBottom="16dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="Quantidade"
             android:textColor="#2C2C2C"
             android:textSize="14dp"
-            app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+            app:layout_constraintBottom_toBottomOf="@+id/textView14"
             app:layout_constraintStart_toEndOf="@+id/textView13" />
 
         <TextView
@@ -179,8 +170,9 @@
             android:layout_marginTop="16dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="04167"
-            android:textColor="#909090"
+            android:textColor="#CEC7C7"
             android:textSize="14dp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
@@ -192,12 +184,9 @@
             android:layout_height="7dp"
             android:layout_marginStart="40dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/enfeite_login"
+            android:src="@drawable/fundo_festa3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintbottom_tobottomof="parent"
-            app:layout_constrainthorizontal_bias="0.0"
-            app:layout_constraintvertical_bias="0.002" />
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -233,32 +222,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9">
 
-            <LinearLayout
+            <GridView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="1dp"
-                android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <GridView
-                    android:layout_width="15dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-                <GridView
-                    android:layout_width="15dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-                <GridView
-                    android:layout_width="15dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
+                app:layout_constraintTop_toTopOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
