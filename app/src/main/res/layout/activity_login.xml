@@ -94,6 +94,7 @@
         android:layout_width="133dp"
         android:layout_height="64dp"
         android:backgroundTint="#FFFFFF"
+        android:onClick="gotoEmptyHome"
         android:src="@drawable/botao_criarconta"
         app:layout_constraintBottom_toBottomOf="@+id/btn_sing"
         app:layout_constraintEnd_toEndOf="parent"
