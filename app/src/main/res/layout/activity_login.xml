@@ -10,15 +10,17 @@
         android:id="@+id/lbl_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:fontFamily="@font/inter_black"
-        android:text="Login"
+        android:text="LOGIN"
         android:textColor="#E91E63"
-        android:textSize="45dp"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.278" />
+        app:layout_constraintTop_toBottomOf="@+id/img_user"
+        app:layout_constraintVertical_bias="0.04" />
 
     <ImageView
         android:id="@+id/img_linha"
@@ -34,14 +36,14 @@
 
     <ImageView
         android:id="@+id/img_user"
-        android:layout_width="71dp"
-        android:layout_height="70dp"
+        android:layout_width="109dp"
+        android:layout_height="109dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.145"
-        app:srcCompat="@drawable/user_login" />
+        app:layout_constraintVertical_bias="0.102"
+        app:srcCompat="@drawable/macaquinho" />
 
     <EditText
         android:id="@+id/txt_email"
@@ -51,7 +53,7 @@
         android:layout_marginEnd="64dp"
         android:background="@drawable/edittext_background"
         android:drawableStart="@drawable/user"
-        android:elevation="20dp"
+        android:elevation="5dp"
         android:ems="10"
         android:hint="Type your email"
         android:inputType="text"
@@ -73,7 +75,7 @@
         android:layout_marginEnd="64dp"
         android:background="@drawable/edittext_background"
         android:drawableStart="@drawable/look"
-        android:elevation="20dp"
+        android:elevation="5dp"
         android:ems="10"
         android:hint="Type your password"
         android:inputType="text"
@@ -93,12 +95,11 @@
         android:layout_height="64dp"
         android:backgroundTint="#FFFFFF"
         android:src="@drawable/botao_criarconta"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_sing"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787" />
+        app:layout_constraintTop_toTopOf="@+id/btn_sing" />
 
     <ImageButton
         android:id="@+id/btn_sing"
@@ -108,17 +109,17 @@
         android:src="@drawable/botao_sing_in"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintHorizontal_bias="0.223"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.787" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_senha"
+        app:layout_constraintVertical_bias="0.183" />
 
     <TextView
         android:id="@+id/lbl_sing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_bold"
-        android:text="SING IN"
+        android:text="Entrar"
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_sing"
@@ -138,5 +139,101 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_criar"
         app:layout_constraintStart_toStartOf="@+id/btn_criar"
         app:layout_constraintTop_toTopOf="@+id/btn_criar" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="620dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.892"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circulo_enfeite" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="316dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1"
+        app:srcCompat="@drawable/circulo_enfeite" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="312dp"
+        android:layout_marginBottom="628dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circulo_enfeite" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginEnd="312dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        app:srcCompat="@drawable/circulo_enfeite" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.878"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32"
+        app:srcCompat="@drawable/circulo_enfeite" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923"
+        app:srcCompat="@drawable/circulo_enfeite" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.678"
+        app:srcCompat="@drawable/circulo_enfeite" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.141"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.318"
+        app:srcCompat="@drawable/circulo_enfeite" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
