@@ -15,6 +15,12 @@
         <activity
             android:name=".EmptyHome"
             android:exported="false" />
+         <activity
+            android:name=".Registro_2"
+            android:exported="false" />
+        <activity
+            android:name=".Registro_1"
+            android:exported="false" />
         <activity
             android:name=".activies.YourOrders"
             android:exported="false" />
