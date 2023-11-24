@@ -16,28 +16,28 @@
             android:name=".EmptyHome"
             android:exported="false" />
          <activity
-            android:name=".Registro_2"
+            android:name=".app.users.views.activities.account.Registro_2"
             android:exported="false" />
         <activity
-            android:name=".Registro_1"
+            android:name=".app.users.views.activities.account.Registro_1"
             android:exported="false" />
         <activity
-            android:name=".activies.YourOrders"
+            android:name=".app.party.views.activities.YourOrders"
             android:exported="false" />
         <activity
-            android:name=".activies.ShowMoreParty"
+            android:name=".app.party.views.activities.ShowMoreParty"
             android:exported="false" />
         <activity
-            android:name=".activies.PartyDetailActivity"
+            android:name=".app.party.views.activities.PartyDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".activies.app.main.views.activities.HomeActivity"
+            android:name=".app.main.views.activities.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".activies.LoginActivity"
+            android:name=".app.users.views.activities.account.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".activies.MainActivity"
+            android:name=".app.main.views.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

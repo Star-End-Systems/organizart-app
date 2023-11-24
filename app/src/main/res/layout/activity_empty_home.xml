@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activies.app.main.views.activities.HomeActivity"
+    tools:context=".app.main.views.activities.HomeActivity"
     tools:layout_editor_absoluteX="-1dp"
     tools:layout_editor_absoluteY="-7dp">
 

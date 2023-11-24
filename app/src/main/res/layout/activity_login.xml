@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activies.LoginActivity">
+    tools:context=".app.users.views.activities.account.LoginActivity">
 
     <TextView
         android:id="@+id/lbl_login"
@@ -142,7 +142,7 @@
         app:layout_constraintTop_toTopOf="@+id/btn_criar" />
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/order_card_status_color"
         android:layout_width="95dp"
         android:layout_height="95dp"
         android:layout_marginTop="620dp"

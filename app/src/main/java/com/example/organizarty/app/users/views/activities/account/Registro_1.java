@@ -1,4 +1,4 @@
-package com.example.organizarty;
+package com.example.organizarty.app.users.views.activities.account;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.organizarty.activies.LoginActivity;
-import com.example.organizarty.activies.app.main.views.activities.HomeActivity;
+import com.example.organizarty.R;
 
 public class Registro_1 extends AppCompatActivity {
 

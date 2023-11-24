@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Registro_1">
+    tools:context=".app.users.views.activities.account.Registro_1">
 
     <ImageView
         android:id="@+id/imageView13"
@@ -230,7 +230,7 @@
         app:srcCompat="@drawable/botao_criarconta" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/order_card_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_bold"

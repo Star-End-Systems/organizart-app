@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@drawable/plano_fundo"
     android:gravity="center"
-    tools:context=".activies.MainActivity" >
+    tools:context=".app.main.views.activities.MainActivity" >
 
     <ImageView
         android:layout_width="169dp"

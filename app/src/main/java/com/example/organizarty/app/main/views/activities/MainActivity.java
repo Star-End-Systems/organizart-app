@@ -1,4 +1,4 @@
-package com.example.organizarty.activies;
+package com.example.organizarty.app.main.views.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.os.Handler;
 
 
 import com.example.organizarty.R;
+import com.example.organizarty.app.users.views.activities.account.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
 

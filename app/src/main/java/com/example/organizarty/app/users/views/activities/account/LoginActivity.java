@@ -1,4 +1,4 @@
-package com.example.organizarty.activies;
+package com.example.organizarty.app.users.views.activities.account;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,8 +8,7 @@ import android.widget.ImageButton;
 
 import com.example.organizarty.EmptyHome;
 import com.example.organizarty.R;
-import com.example.organizarty.Registro_1;
-import com.example.organizarty.activies.app.main.views.activities.HomeActivity;
+import com.example.organizarty.app.main.views.activities.HomeActivity;
 
 public class LoginActivity extends AppCompatActivity {
     ImageButton SingIn, Criar;

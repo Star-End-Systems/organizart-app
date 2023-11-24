@@ -1,4 +1,4 @@
-package com.example.organizarty.activies.app.main.views.activities;
+package com.example.organizarty.app.main.views.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,16 +7,11 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 
 import android.os.Bundle;
-import android.widget.GridView;
-import android.widget.LinearLayout;
 
 import com.example.organizarty.R;
-import com.example.organizarty.activies.LoginActivity;
-import com.example.organizarty.activies.MainActivity;
-import com.example.organizarty.activies.PartyDetailActivity;
-import com.example.organizarty.activies.YourOrders;
-import com.example.organizarty.activies.app.main.views.adapters.OrderAdapter;
-import com.example.organizarty.activies.app.main.views.adapters.OrderCard;
+import com.example.organizarty.app.party.views.activities.PartyDetailActivity;
+import com.example.organizarty.app.party.views.activities.YourOrders;
+import com.example.organizarty.app.party.views.adapters.OrderCard;
 
 import java.util.ArrayList;
 import java.util.List;

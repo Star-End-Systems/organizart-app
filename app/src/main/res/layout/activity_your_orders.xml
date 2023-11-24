@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activies.ShowMoreParty">
+    tools:context=".app.party.views.activities.ShowMoreParty">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -133,14 +133,16 @@
         app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
     <GridView
+        android:id="@+id/all_orders_grid"
         android:layout_width="268dp"
         android:layout_height="278dp"
+        android:numColumns="1"
+        android:verticalSpacing="25dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView11"
-        android:numColumns="2"
         app:layout_constraintVertical_bias="0.285" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
