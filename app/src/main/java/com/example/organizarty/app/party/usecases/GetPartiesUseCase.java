@@ -9,6 +9,7 @@ import java.util.List;
 public class GetPartiesUseCase {
     public static PartyEntity GetPartyFromId(String id){
         List<OrderEntity> orders = GetOrdersUseCase.execute();
+        orders.addAll(GetOrdersUseCase.execute());
 
         return new PartyEntity(id, "Festinha do kikozinho", "Chá de bebe", orders);
     }

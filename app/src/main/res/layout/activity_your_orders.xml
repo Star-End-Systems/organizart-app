@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".app.party.views.activities.ShowMoreParty">
+    tools:context=".app.party.views.activities.YourOrders">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutHeader"
@@ -80,8 +80,6 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/textHello"
             app:layout_constraintTop_toBottomOf="@+id/textHello" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
@@ -90,6 +88,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="36dp"
+        android:onClick="goToHome"
         android:backgroundTint="#FFFFFF"
         android:contentDescription="Show less"
         android:src="@drawable/botao_criarconta"
@@ -103,46 +102,34 @@
         android:text="Show less"
         android:textColor="#ff3367"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        android:onClick="goToHome"
         app:layout_constraintEnd_toEndOf="@+id/imageButton"
         app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
         app:layout_constraintTop_toTopOf="@+id/imageButton"
         app:layout_constraintVertical_bias="0.512" />
 
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="370dp"
-        android:layout_height="341dp"
-        android:layout_marginTop="8dp"
-        android:src="@drawable/rainbow_border"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
-
     <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="6dp"
         android:fontFamily="@font/inter_black"
         android:text="Seus pedidos"
         android:textSize="14dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+        app:layout_constraintStart_toStartOf="@+id/all_orders_grid"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
     <GridView
         android:id="@+id/all_orders_grid"
         android:layout_width="268dp"
-        android:layout_height="278dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
         android:numColumns="1"
         android:verticalSpacing="25dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
