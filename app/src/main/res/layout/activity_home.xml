@@ -94,8 +94,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="1dp"
+            android:layout_marginTop="64dp"
             android:layout_marginEnd="1dp"
+            android:onClick="goToMorePartie"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -116,6 +117,20 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView3"
                 app:layout_constraintVertical_bias="0.068" />
 
+
+            <TextView
+                android:id="@+id/lbl_festas2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/inter_extrabold"
+                android:onClick="goToMorePartie"
+                android:text="Mostrar mais"
+                android:textColor="#B0AAAA"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_festas"
+                app:layout_constraintEnd_toStartOf="@+id/imageView4"
+                app:layout_constraintTop_toTopOf="@+id/lbl_festas" />
 
             <ImageView
                 android:id="@+id/imageView3"
@@ -166,6 +181,16 @@
 
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/lbl_festas2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lbl_festas2"
+                app:srcCompat="@drawable/show_more" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

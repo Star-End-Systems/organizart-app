@@ -16,6 +16,7 @@ import com.example.organizarty.app.party.entities.PartyEntity;
 import com.example.organizarty.app.party.usecases.GetOrdersUseCase;
 import com.example.organizarty.app.party.usecases.GetPartiesUseCase;
 import com.example.organizarty.app.party.views.activities.PartyDetailActivity;
+import com.example.organizarty.app.party.views.activities.ShowMoreParty;
 import com.example.organizarty.app.party.views.activities.YourOrders;
 import com.example.organizarty.app.party.views.adapters.OrderCard;
 
@@ -59,6 +60,11 @@ public class HomeActivity extends AppCompatActivity {
 
     public void goToYourOrders(View view){
         Intent intent = new Intent(this, YourOrders.class);
+        startActivity(intent);
+    }
+
+    public void goToMorePartie(View v){
+        Intent intent = new Intent(this, ShowMoreParty.class);
         startActivity(intent);
     }
 

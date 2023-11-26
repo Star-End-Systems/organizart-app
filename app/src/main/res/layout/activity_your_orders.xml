@@ -122,10 +122,10 @@
 
     <GridView
         android:id="@+id/all_orders_grid"
-        android:layout_width="268dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="50dp"
-        android:numColumns="1"
+        android:numColumns="2"
         android:verticalSpacing="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
