@@ -1,7 +1,7 @@
 package com.example.organizarty.app.party.views.adapters;
 
-import com.example.organizarty.app.domain.enums.ItemStatus;
-import com.example.organizarty.app.domain.enums.ItemType;
+import com.example.organizarty.enums.ItemStatus;
+import com.example.organizarty.enums.ItemType;
 
 public class OrderCard {
     public String name;

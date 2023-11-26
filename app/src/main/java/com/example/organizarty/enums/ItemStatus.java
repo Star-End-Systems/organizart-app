@@ -1,4 +1,4 @@
-package com.example.organizarty.app.domain.enums;
+package com.example.organizarty.enums;
 
 import androidx.annotation.NonNull;
 

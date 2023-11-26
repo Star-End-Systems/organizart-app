@@ -13,6 +13,7 @@ import com.example.organizarty.app.party.entities.PartyEntity;
 import com.example.organizarty.app.party.usecases.GetPartiesUseCase;
 import com.example.organizarty.app.party.views.adapters.PartyOrderAdapter;
 import com.example.organizarty.app.party.views.adapters.PartyOrderCard;
+import static com.example.organizarty.utils.Async.Fetcher.async;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -25,7 +26,7 @@ public class PartyDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_party_detail);
         setup();
-        initialFetch();
+        async(this::initialFetch);
     }
 
     void setup(){
@@ -37,7 +38,6 @@ public class PartyDetailActivity extends AppCompatActivity {
     }
 
     void initialFetch(){
-        // TODO: make async
         PartyEntity party = GetPartiesUseCase.GetPartyFromId("4002");
         renderScreen(party);
     }

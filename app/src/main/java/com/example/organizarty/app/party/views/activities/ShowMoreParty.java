@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.example.organizarty.R;
 import com.example.organizarty.app.party.entities.PartyEntity;
@@ -46,11 +47,19 @@ public class ShowMoreParty extends AppCompatActivity {
     }
 
     private void initialFetch(){
-        async(() -> addCards(GetPartiesUseCase
-                .GetParties()
-                .stream()
-                .map(x -> new PartyAdapter.Card(x.name, x.type, x.id))
-                .collect(Collectors.toList())));
+        async(() -> {
+            try {
+                addCards(GetPartiesUseCase
+                        .GetParties()
+                        .stream()
+                        .map(x -> new PartyAdapter.Card(x.name, x.type, x.id))
+                        .collect(Collectors.toList()));
+            } catch (Exception e) {
+                runOnUiThread(() ->
+                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show()
+                );
+            }
+        });
     }
 
     private void addCards(List<PartyAdapter.Card> cards){

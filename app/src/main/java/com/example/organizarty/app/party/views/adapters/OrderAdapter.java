@@ -2,7 +2,6 @@ package com.example.organizarty.app.party.views.adapters;
 
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.example.organizarty.R;
-import com.example.organizarty.app.domain.enums.ItemStatus;
 
 import java.util.List;
 

@@ -7,6 +7,7 @@ import android.view.View;
 
 import android.os.Bundle;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.example.organizarty.R;
 import com.example.organizarty.app.main.views.adapters.ListOrdersAdapters;
@@ -19,7 +20,9 @@ import com.example.organizarty.app.party.views.activities.PartyDetailActivity;
 import com.example.organizarty.app.party.views.activities.ShowMoreParty;
 import com.example.organizarty.app.party.views.activities.YourOrders;
 import com.example.organizarty.app.party.views.adapters.OrderCard;
+import static com.example.organizarty.utils.Async.Fetcher.async;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -28,19 +31,30 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        async(this::setupPartyCards);
         setupPartyCards();
         setupOrderCards();
     }
 
     private void setupPartyCards()
     {
-        LinearLayout linear = findViewById(R.id.home_your_parties);
+        try {
+            List<PartyEntity> party = GetPartiesUseCase.GetParties();
+            renderpartyCards(party);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-        List<PartyEntity> party = GetPartiesUseCase.GetParties();
-
-        ListPartiesAdapter
-                .getCards(this, party, this::goToDescriptionParty)
-                .forEach(linear::addView);
+    private void renderpartyCards(List<PartyEntity> parties){
+        runOnUiThread(() -> {
+            LinearLayout linear = findViewById(R.id.home_your_parties);
+            ListPartiesAdapter
+                    .getCards(this, parties, this::goToDescriptionParty)
+                    .forEach((a) -> {
+                        runOnUiThread(() -> linear.addView(a));
+                    });
+        });
     }
 
     private void setupOrderCards(){
