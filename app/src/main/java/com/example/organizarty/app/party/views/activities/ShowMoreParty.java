@@ -30,7 +30,7 @@ public class ShowMoreParty extends AppCompatActivity {
         setContentView(R.layout.activity_show_more_party);
 
         setup();
-        initialFetch();
+        async(this::initialFetch);
     }
 
     private void setup(){
@@ -47,19 +47,17 @@ public class ShowMoreParty extends AppCompatActivity {
     }
 
     private void initialFetch(){
-        async(() -> {
-            try {
-                addCards(GetPartiesUseCase
-                        .GetParties()
-                        .stream()
-                        .map(x -> new PartyAdapter.Card(x.name, x.type, x.id))
-                        .collect(Collectors.toList()));
-            } catch (Exception e) {
-                runOnUiThread(() ->
+        try {
+            addCards(GetPartiesUseCase
+                    .GetParties()
+                    .stream()
+                    .map(x -> new PartyAdapter.Card(x.name, x.type, x.id))
+                    .collect(Collectors.toList()));
+        } catch (Exception e) {
+            runOnUiThread(() ->
                     Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show()
-                );
-            }
-        });
+            );
+        }
     }
 
     private void addCards(List<PartyAdapter.Card> cards){

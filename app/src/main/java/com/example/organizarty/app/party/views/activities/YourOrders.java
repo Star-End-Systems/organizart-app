@@ -22,18 +22,16 @@ import java.util.stream.Collectors;
 
 public class YourOrders extends AppCompatActivity {
     private ArrayAdapter<OrderCard> adapter;
-    private List<OrderCard> orders = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_your_orders);
         setup();
-        initialFetch();
+        async(this::initialFetch);
     }
 
     private void setup(){
-        adapter = new OrderAdapter(this, orders, this::goToCardDescriptioon);
+        adapter = new OrderAdapter(this, new ArrayList<>(), this::goToCardDescriptioon);
 
         GridView gridView = findViewById(R.id.all_orders_grid);
 
@@ -41,11 +39,11 @@ public class YourOrders extends AppCompatActivity {
     }
 
     private void initialFetch(){
-        async(() -> addCards(GetOrdersUseCase
-                                .execute()
-                                .stream()
-                                .map(x -> new OrderCard(x.name, x.id,x.type, x.status))
-                                .collect(Collectors.toList())));
+        addCards(GetOrdersUseCase
+                .execute()
+                .stream()
+                .map(x -> new OrderCard(x.name, x.id,x.type, x.status))
+                .collect(Collectors.toList()));
     }
 
     private void addCards(List<OrderCard> cards){
