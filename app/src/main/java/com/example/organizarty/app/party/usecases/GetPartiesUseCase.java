@@ -1,5 +1,6 @@
 package com.example.organizarty.app.party.usecases;
 
+import com.example.organizarty.app.domain.enums.PartyType;
 import com.example.organizarty.app.party.entities.OrderEntity;
 import com.example.organizarty.app.party.entities.PartyEntity;
 
@@ -11,7 +12,7 @@ public class GetPartiesUseCase {
         List<OrderEntity> orders = GetOrdersUseCase.execute();
         orders.addAll(GetOrdersUseCase.execute());
 
-        return new PartyEntity(id, "Festinha do kikozinho", "Chá de bebe", orders);
+        return new PartyEntity(id, "Festinha do kikozinho", PartyType.Aniversario, orders);
     }
 
     public static List<PartyEntity> GetParties(){

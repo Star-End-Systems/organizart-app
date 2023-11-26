@@ -38,7 +38,7 @@ public class PartyOrderAdapter extends ArrayAdapter<PartyOrderCard> {
 
         txtName.setText(card.name);
         txtNote.setText(String.valueOf(card.quantity));
-        txtStatus.setText(card.status);
+        txtStatus.setText(card.status.toString());
 
         return convertView;
     }

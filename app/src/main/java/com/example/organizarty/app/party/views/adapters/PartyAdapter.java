@@ -14,14 +14,16 @@ import java.util.ArrayList;
 import androidx.annotation.NonNull;
 
 import com.example.organizarty.R;
+import com.example.organizarty.app.domain.enums.ItemType;
+import com.example.organizarty.app.domain.enums.PartyType;
 
 public class PartyAdapter extends ArrayAdapter<PartyAdapter.Card> {
     public static class Card{
         public String name;
-        public String type;
+        public PartyType type;
         public String date;
 
-        public Card(String name, String type, String date){
+        public Card(String name, PartyType type, String date){
             this.name = name;
             this.type = type;
             this.date = date;
@@ -50,14 +52,15 @@ public class PartyAdapter extends ArrayAdapter<PartyAdapter.Card> {
         ImageView imgType = convertView.findViewById(R.id.your_parties_card_image);
 
         txtName.setText(card.name);
-        txtType.setText(card.type);
+        txtType.setText(card.type.toString());
         txtDate.setText(card.date);
 
         switch (card.type){
-            case("Aceito"):
+            case BabyTea:
                 break;
-
-            case("Recusado"):
+            case Casamento:
+                break;
+            case Aniversario:
                 break;
         }
 

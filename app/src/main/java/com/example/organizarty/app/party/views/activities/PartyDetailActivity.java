@@ -50,7 +50,7 @@ public class PartyDetailActivity extends AppCompatActivity {
             ImageView txtImage = findViewById(R.id.party_detail_image);
 
             txtName.setText(party.name);
-            txtType.setText(party.type);
+            txtType.setText(party.type.toString());
             txtId.setText(party.id);
 
             List<PartyOrderCard> cards = party.orders

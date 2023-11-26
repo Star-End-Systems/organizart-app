@@ -1,7 +1,9 @@
 package com.example.organizarty.app.main.views.adapters;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,7 +37,15 @@ public class ListPartiesAdapter {
             View cardView = inflater.inflate(R.layout.party_card, null);
 
             TextView txtName = cardView.findViewById(R.id.party_card_name);
+            TextView txtType = cardView.findViewById(R.id.party_card_type);
+            TextView txtDate = cardView.findViewById(R.id.party_card_date);
+
+            ImageView imgIcon = cardView.findViewById(R.id.party_card_icon);
+            CardView card = cardView.findViewById(R.id.party_card);
+
             txtName.setText(party.name);
+            txtDate.setText(party.id);
+            txtType.setText(party.type.toString());
 
             cardView.setOnClickListener(view -> callback.run(party) );
 
@@ -44,6 +54,27 @@ public class ListPartiesAdapter {
                 Toast.makeText(context, msg, Toast.LENGTH_SHORT).show();
                 return true;
             });
+
+            int color = 0;
+            int image = 0;
+
+            switch (party.type){
+                case BabyTea:
+                    color = Color.parseColor("#A882B5");
+                    image = R.drawable.urso;
+                    break;
+                case Casamento:
+                    color = Color.GREEN;
+                    image = R.drawable.drink;
+                    break;
+                case Aniversario:
+                    color = Color.YELLOW;
+                    image = R.drawable.bolo;
+                    break;
+            }
+
+            card.setCardBackgroundColor(color);
+            imgIcon.setImageResource(image);
 
             cardView.setLayoutParams(layoutParams);
             return cardView;

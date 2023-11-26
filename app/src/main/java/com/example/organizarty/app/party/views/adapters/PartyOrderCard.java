@@ -1,11 +1,13 @@
 package com.example.organizarty.app.party.views.adapters;
 
+import com.example.organizarty.app.domain.enums.ItemStatus;
+
 public class PartyOrderCard {
     public String name;
     public int quantity;
-    public String status;
+    public ItemStatus status;
 
-    public PartyOrderCard(String name, int quantity, String status){
+    public PartyOrderCard(String name, int quantity, ItemStatus status){
         this.name = name;
         this.quantity = quantity;
         this.status = status;

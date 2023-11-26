@@ -56,21 +56,21 @@ public class ListOrdersAdapters {
 
                     cardView.setLayoutParams(layoutParams);
 
-                    int color = Color.GRAY;
+                    int color = 0;
 
                     switch (order.status){
-                        case("Aceito"):
-                            color = Color.parseColor("#2AD861");
-                            imgIcon.setImageResource(R.drawable.aceito);
+                        case WAITING:
+                        case PENDING:
+                            color = Color.GRAY;
+                            imgIcon.setImageResource(R.drawable.look);
                             break;
-
-                        case("Recusado"):
+                        case ACCEPTED:
+                            imgIcon.setImageResource(R.drawable.aceito);
+                            color = Color.parseColor("#2AD861");
+                            break;
+                        case REFUSED:
                             color = Color.RED;
                             imgIcon.setImageResource(R.drawable.excluir);
-                            break;
-
-                        default:
-                            imgIcon.setImageResource(R.drawable.look);
                             break;
                     }
 

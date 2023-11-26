@@ -17,6 +17,7 @@
 
 
         <ImageView
+            android:id="@+id/party_card_icon"
             android:layout_width="83dp"
             android:layout_height="83dp"
             android:layout_marginLeft="40dp"
@@ -40,7 +41,7 @@
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/tipo_festa"
+            android:id="@+id/party_card_type"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -50,7 +51,7 @@
             android:textSize="5dp" />
 
         <TextView
-            android:id="@+id/data_festa"
+            android:id="@+id/party_card_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="104dp"

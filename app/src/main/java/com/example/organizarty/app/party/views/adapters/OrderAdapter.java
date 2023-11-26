@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 
 import com.example.organizarty.R;
+import com.example.organizarty.app.domain.enums.ItemStatus;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ import java.util.List;
 public class OrderAdapter extends ArrayAdapter<OrderCard> {
     public interface GoToPokemonDetail{ void call(OrderCard pokemon); }
     private final int LAYOUT = R.layout.yourd_order_card;
-    private GoToPokemonDetail onClickListener;
+    private final GoToPokemonDetail onClickListener;
     public OrderAdapter(@NonNull Context context, @NonNull List<OrderCard> objects, GoToPokemonDetail onclickAction) {
         super(context, R.layout.yourd_order_card, objects);
         onClickListener = onclickAction;
@@ -43,17 +44,20 @@ public class OrderAdapter extends ArrayAdapter<OrderCard> {
 
         txtName.setText(order.name);
         txtDescription.setText(order.description);
-        txtStatus.setText(order.status);
-        txtType.setText(order.type);
+        txtStatus.setText(order.status.toString());
+        txtType.setText(order.type.toString());
 
-        int color = Color.GRAY;
+        int color = 0;
 
         switch (order.status){
-            case("Aceito"):
+            case WAITING:
+            case PENDING:
+                color = Color.GRAY;
+                break;
+            case ACCEPTED:
                 color = Color.parseColor("#2AD861");
                 break;
-
-            case("Recusado"):
+            case REFUSED:
                 color = Color.RED;
                 break;
         }
