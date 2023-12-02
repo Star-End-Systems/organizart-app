@@ -13,14 +13,20 @@ import java.util.List;
 import java.util.Optional;
 
 public class GetPartiesUseCase {
-    public static Optional<PartyEntity> GetPartyFromId(String id) throws OrganizartyAPIException, IOException {
-        OrganizartyAPI api = new OrganizartyAPI("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Imx1LWNzcyIsIm5hbWVpZCI6IjA4ZGJmMjlhLTYwN2UtNDU0ZC04ZjBjLWQwYmY4NTNkZDIwNSIsInJvbGUiOiJDbGllbnQiLCJuYmYiOjE3MDE1MjUxODQsImV4cCI6MTcwMTYxMTU4NCwiaWF0IjoxNzAxNTI1MTg0fQ.UqGltwRhoy-cP6vcPW3gGOQUmKeh13KY4usccX7r19Q");
+    private final String _token;
+
+    public GetPartiesUseCase(String token){
+        _token = token;
+    }
+
+    public Optional<PartyEntity> GetPartyFromId(String id) throws OrganizartyAPIException, IOException {
+        OrganizartyAPI api = new OrganizartyAPI(_token);
 
         return api.getParty(id);
     }
 
-    public static List<PartyEntity> GetParties() throws OrganizartyAPIException, IOException {
-        OrganizartyAPI api = new OrganizartyAPI("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6Imx1LWNzcyIsIm5hbWVpZCI6IjA4ZGJmMjlhLTYwN2UtNDU0ZC04ZjBjLWQwYmY4NTNkZDIwNSIsInJvbGUiOiJDbGllbnQiLCJuYmYiOjE3MDE1MjUxODQsImV4cCI6MTcwMTYxMTU4NCwiaWF0IjoxNzAxNTI1MTg0fQ.UqGltwRhoy-cP6vcPW3gGOQUmKeh13KY4usccX7r19Q");
+    public List<PartyEntity> GetParties() throws OrganizartyAPIException, IOException {
+        OrganizartyAPI api = new OrganizartyAPI(_token);
 
         return api.getParties();
     }

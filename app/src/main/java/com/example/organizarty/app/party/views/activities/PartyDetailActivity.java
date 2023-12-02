@@ -17,8 +17,12 @@ import com.example.organizarty.app.party.usecases.GetOrdersUseCase;
 import com.example.organizarty.app.party.usecases.GetPartiesUseCase;
 import com.example.organizarty.app.party.views.adapters.PartyOrderAdapter;
 import com.example.organizarty.app.party.views.adapters.PartyOrderCard;
+import com.example.organizarty.app.users.entities.UserEntity;
+import com.example.organizarty.app.users.views.activities.account.LoginActivity;
+import com.example.organizarty.exceptions.AnauthenticatedUserException;
 import com.example.organizarty.exceptions.NotFoundException;
 import com.example.organizarty.exceptions.OrganizartyAPIException;
+import com.example.organizarty.utils.storage.PreferencesUtils;
 
 import static com.example.organizarty.utils.Async.Fetcher.async;
 
@@ -31,6 +35,8 @@ import java.util.stream.Collectors;
 public class PartyDetailActivity extends AppCompatActivity {
     private ArrayAdapter<PartyOrderCard> adapter;
     private String PartyId;
+
+    private PreferencesUtils _preferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,16 +56,24 @@ public class PartyDetailActivity extends AppCompatActivity {
         gridView.setAdapter(adapter);
 
         PartyId = intent.getStringExtra("PARTY_ID");
+
+        _preferences = new PreferencesUtils(this);
     }
 
-    PartyEntity initialFetch() throws OrganizartyAPIException, IOException, NotFoundException {
-        Optional<PartyEntity> p = GetPartiesUseCase.GetPartyFromId(PartyId);
+    PartyEntity initialFetch() throws OrganizartyAPIException, IOException, NotFoundException, AnauthenticatedUserException {
+        UserEntity   user = _preferences.readOrganizartyAuthToken();
+        Optional<PartyEntity> p = new GetPartiesUseCase(user.token).GetPartyFromId(PartyId);
 
         if(!p.isPresent()){
             throw new NotFoundException("Party not found");
         }
 
         return p.get();
+    }
+
+    private void goToLogin(){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private List<OrderEntity> fetchOrderCards() throws OrganizartyAPIException, IOException {
@@ -72,6 +86,10 @@ public class PartyDetailActivity extends AppCompatActivity {
 
     void handleError(Exception e){
         runOnUiThread(() -> {
+            if(e instanceof AnauthenticatedUserException){
+                goToLogin();
+                return;
+            }
             Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
         });
     }

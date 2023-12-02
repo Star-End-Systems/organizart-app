@@ -46,7 +46,7 @@
         app:srcCompat="@drawable/macaquinho" />
 
     <EditText
-        android:id="@+id/txt_email"
+        android:id="@+id/register_email"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="64dp"
@@ -94,7 +94,6 @@
         android:layout_width="133dp"
         android:layout_height="64dp"
         android:backgroundTint="#FFFFFF"
-        android:onClick="gotoEmptyHome"
         android:src="@drawable/botao_criarconta"
         app:layout_constraintBottom_toBottomOf="@+id/btn_sing"
         app:layout_constraintEnd_toEndOf="parent"

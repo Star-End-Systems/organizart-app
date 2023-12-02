@@ -17,15 +17,20 @@ import com.example.organizarty.app.party.usecases.GetPartiesUseCase;
 import com.example.organizarty.app.party.views.adapters.OrderAdapter;
 import com.example.organizarty.app.party.views.adapters.OrderCard;
 import com.example.organizarty.app.party.views.adapters.PartyAdapter;
+import com.example.organizarty.app.users.entities.UserEntity;
+import com.example.organizarty.app.users.views.activities.account.LoginActivity;
+import com.example.organizarty.exceptions.AnauthenticatedUserException;
 import com.example.organizarty.exceptions.OrganizartyAPIException;
+import com.example.organizarty.utils.storage.PreferencesUtils;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class ShowMoreParty extends AppCompatActivity {
-
     private ArrayAdapter<PartyAdapter.Card> adapter;
+
+    private PreferencesUtils _preferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,10 +46,21 @@ public class ShowMoreParty extends AppCompatActivity {
         GridView gridView = findViewById(R.id.show_more_party_grid);
 
         gridView.setAdapter(adapter);
+
+        _preferences = new PreferencesUtils(this);
     }
 
     private void handleError(Exception e){
-        Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+        runOnUiThread(() -> {
+            if(e instanceof AnauthenticatedUserException){
+                Intent intent = new Intent(this, LoginActivity.class);
+                startActivity(intent);
+                return;
+            }
+
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+        });
+
     }
 
     public void goToDescriptionParty(PartyAdapter.Card party){
@@ -62,8 +78,9 @@ public class ShowMoreParty extends AppCompatActivity {
                     .collect(Collectors.toList()));
     }
 
-    private List<PartyEntity> fetchParties() throws OrganizartyAPIException, IOException {
-        return GetPartiesUseCase.GetParties();
+    private List<PartyEntity> fetchParties() throws OrganizartyAPIException, IOException, AnauthenticatedUserException {
+        UserEntity user = _preferences.readOrganizartyAuthToken();
+        return new GetPartiesUseCase(user.token).GetParties();
     }
 
     private void addCards(List<PartyAdapter.Card> cards){

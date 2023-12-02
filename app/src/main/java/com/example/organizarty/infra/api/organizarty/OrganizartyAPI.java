@@ -4,28 +4,45 @@ import android.graphics.Path;
 
 import com.example.organizarty.app.party.entities.OrderEntity;
 import com.example.organizarty.app.party.entities.PartyEntity;
+import com.example.organizarty.app.users.usecases.LoginUserUsecase;
+import com.example.organizarty.app.users.usecases.RegisterUserUseCase;
 import com.example.organizarty.enums.PartyType;
 import com.example.organizarty.exceptions.OrganizartyAPIException;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class OrganizartyAPI {
+    public static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+
     private final String token;
     private final OkHttpClient _client;
 
     public OrganizartyAPI(String token){
         this.token = token;
         _client = new OkHttpClient();
+    }
+
+    public class LoginUserResponse{
+        public String id;
+        public String token;
+        public String fullname;
+        public String email;
+        public String username;
     }
 
     public static class PartiesResponse{
@@ -98,6 +115,7 @@ public class OrganizartyAPI {
         }
     }
 
+    // TODO: Orders from party
     public List<OrderEntity> getOrders() throws IOException, OrganizartyAPIException {
         Request request = new Request
                 .Builder()
@@ -125,5 +143,74 @@ public class OrganizartyAPI {
                 return new ArrayList<>();
             }
         }
+    }
+
+    public void RegisterUser(RegisterUserUseCase.SimpleRegister registerDto) throws Exception {
+        Gson gson = new Gson();
+        String json = gson.toJson(registerDto);
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+
+        String url = String.format("%s/User/Register", BASE_URL);
+
+        Request request = new Request
+                .Builder()
+                .url(url)
+                .post(requestBody)
+                .build();
+
+        try(Response response = _client.newCall(request).execute() ) {
+            if(response.body() == null){
+                return;
+            }
+
+            String body = response.body().string();
+
+            if (response.code() != 200){
+                throw new OrganizartyAPIException("Something went wrong", response.code(), body);
+            }
+
+            try{
+                OrdersResponse parties = gson.fromJson(body, OrdersResponse.class);
+                return;
+            } catch (Exception _e){
+                throw new Exception("Invalid response");
+            }
+        }
+
+    }
+
+    public LoginUserResponse LoginUser(LoginUserUsecase.SimpleLogin loginDto) throws Exception {
+        Gson gson = new Gson();
+        String json = gson.toJson(loginDto);
+
+        RequestBody requestBody = RequestBody.create(JSON, json);
+
+        String url = String.format("%s/User/Login", BASE_URL);
+
+        Request request = new Request
+                .Builder()
+                .url(url)
+                .post(requestBody)
+                .build();
+
+        try(Response response = _client.newCall(request).execute() ) {
+            if(response.body() == null){
+                throw new OrganizartyAPIException("Something went wrong", response.code(), "");
+            }
+
+            String body = response.body().string();
+
+            if (response.code() != 200){
+                throw new OrganizartyAPIException("Something went wrong", response.code(), body);
+            }
+
+            try{
+                return gson.fromJson(body, LoginUserResponse.class);
+            } catch (Exception _e){
+                throw new Exception("Invalid response");
+            }
+        }
+
     }
 }

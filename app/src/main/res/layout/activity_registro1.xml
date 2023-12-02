@@ -104,7 +104,7 @@
 
 
     <EditText
-        android:id="@+id/txt_email"
+        android:id="@+id/register_email"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="64dp"
@@ -125,7 +125,7 @@
         app:layout_constraintVertical_bias="0.392" />
 
     <EditText
-        android:id="@+id/txt_username"
+        android:id="@+id/register_username"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="64dp"
@@ -143,11 +143,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_email"
+        app:layout_constraintTop_toBottomOf="@+id/register_email"
         app:layout_constraintVertical_bias="0.04" />
 
     <EditText
-        android:id="@+id/txt_username3"
+        android:id="@+id/register_confirm_password"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="64dp"
@@ -166,11 +166,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_username2"
+        app:layout_constraintTop_toBottomOf="@+id/register_password"
         app:layout_constraintVertical_bias="0.053" />
 
     <EditText
-        android:id="@+id/txt_username2"
+        android:id="@+id/register_password"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_marginStart="64dp"
@@ -189,7 +189,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_username"
+        app:layout_constraintTop_toBottomOf="@+id/register_username"
         app:layout_constraintVertical_bias="0.046" />
 
     <ImageView
@@ -199,10 +199,10 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txt_username3"
+        app:layout_constraintEnd_toEndOf="@+id/register_confirm_password"
         app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toEndOf="@+id/btn_voltar"
-        app:layout_constraintTop_toBottomOf="@+id/txt_username3"
+        app:layout_constraintTop_toBottomOf="@+id/register_confirm_password"
         app:layout_constraintVertical_bias="0.034"
         app:srcCompat="@drawable/fundo_continue" />
 
@@ -224,8 +224,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.005"
-        app:layout_constraintStart_toStartOf="@+id/txt_username3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_username3"
+        app:layout_constraintStart_toStartOf="@+id/register_confirm_password"
+        app:layout_constraintTop_toBottomOf="@+id/register_confirm_password"
         app:layout_constraintVertical_bias="0.1"
         app:srcCompat="@drawable/botao_criarconta" />
 

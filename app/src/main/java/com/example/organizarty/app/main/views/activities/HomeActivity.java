@@ -20,7 +20,11 @@ import com.example.organizarty.app.party.views.activities.PartyDetailActivity;
 import com.example.organizarty.app.party.views.activities.ShowMoreParty;
 import com.example.organizarty.app.party.views.activities.YourOrders;
 import com.example.organizarty.app.party.views.adapters.OrderCard;
+import com.example.organizarty.app.users.entities.UserEntity;
+import com.example.organizarty.app.users.views.activities.account.LoginActivity;
+import com.example.organizarty.exceptions.AnauthenticatedUserException;
 import com.example.organizarty.exceptions.OrganizartyAPIException;
+import com.example.organizarty.utils.storage.PreferencesUtils;
 
 import static com.example.organizarty.utils.Async.Fetcher.async;
 
@@ -30,17 +34,31 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class HomeActivity extends AppCompatActivity {
+    private PreferencesUtils _preferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        setup();
+
         async(this::setupPartyCards, this::renderpartyCards, this::handleError);
         async(this::setupOrderCards, this::renderOrderCards, this::handleError);
     }
 
-    private List<PartyEntity> setupPartyCards() throws OrganizartyAPIException, IOException {
-        return GetPartiesUseCase.GetParties();
+    private void setup(){
+        _preferences = new PreferencesUtils(this);
+    }
+
+    private List<PartyEntity> setupPartyCards() throws OrganizartyAPIException, IOException, AnauthenticatedUserException {
+        UserEntity user = _preferences.readOrganizartyAuthToken();
+        return new GetPartiesUseCase(user.token).GetParties();
+    }
+
+    private void goToLogin(){
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
     }
 
     private void renderpartyCards(List<PartyEntity> parties){
@@ -53,8 +71,14 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void handleError(Exception e){
-        runOnUiThread( () ->
-                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show()
+        runOnUiThread(() ->{
+            if(e instanceof AnauthenticatedUserException){
+                goToLogin();
+                return;
+            }
+
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+        }
         );
     }
 
