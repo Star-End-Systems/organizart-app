@@ -17,11 +17,13 @@ import com.example.organizarty.enums.PartyType;
 
 public class PartyAdapter extends ArrayAdapter<PartyAdapter.Card> {
     public static class Card{
+        public String id;
         public String name;
         public PartyType type;
         public String date;
 
-        public Card(String name, PartyType type, String date){
+        public Card(String id, String name, PartyType type, String date){
+            this.id = id;
             this.name = name;
             this.type = type;
             this.date = date;

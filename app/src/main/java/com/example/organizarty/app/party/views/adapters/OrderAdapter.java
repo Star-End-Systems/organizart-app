@@ -52,7 +52,7 @@ public class OrderAdapter extends ArrayAdapter<OrderCard> {
             case PENDING:
                 color = Color.GRAY;
                 break;
-            case ACCEPTED:
+            case ACCEPT:
                 color = Color.parseColor("#2AD861");
                 break;
             case REFUSED:

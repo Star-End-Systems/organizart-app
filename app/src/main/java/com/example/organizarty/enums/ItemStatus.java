@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 public enum ItemStatus {
     WAITING("Aguardando"),
     PENDING("Pendente"),
-    ACCEPTED("Aceito"),
+    ACCEPT("Aceito"),
     REFUSED("Recusado");
 
     private final String name;

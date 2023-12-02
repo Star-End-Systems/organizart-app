@@ -13,7 +13,9 @@ import androidx.cardview.widget.CardView;
 
 import com.example.organizarty.R;
 import com.example.organizarty.app.party.entities.PartyEntity;
+import com.example.organizarty.enums.PartyType;
 
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -36,6 +38,9 @@ public class ListPartiesAdapter {
         return cards.stream().map(party -> {
             View cardView = inflater.inflate(R.layout.party_card, null);
 
+            if(party.type == null){
+                party.type = PartyType.BabyTea;
+            }
             TextView txtName = cardView.findViewById(R.id.party_card_name);
             TextView txtType = cardView.findViewById(R.id.party_card_type);
             TextView txtDate = cardView.findViewById(R.id.party_card_date);
@@ -44,8 +49,8 @@ public class ListPartiesAdapter {
             CardView card = cardView.findViewById(R.id.party_card);
 
             txtName.setText(party.name);
-            txtDate.setText(party.id);
-            txtType.setText(party.type.toString());
+            txtDate.setText(party.date);
+            txtType.setText(party.name);
 
             cardView.setOnClickListener(view -> callback.run(party) );
 

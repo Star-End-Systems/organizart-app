@@ -17,7 +17,9 @@ import com.example.organizarty.app.party.usecases.GetPartiesUseCase;
 import com.example.organizarty.app.party.views.adapters.OrderAdapter;
 import com.example.organizarty.app.party.views.adapters.OrderCard;
 import com.example.organizarty.app.party.views.adapters.PartyAdapter;
+import com.example.organizarty.exceptions.OrganizartyAPIException;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -30,7 +32,7 @@ public class ShowMoreParty extends AppCompatActivity {
         setContentView(R.layout.activity_show_more_party);
 
         setup();
-        async(this::initialFetch);
+        async(this::fetchParties, this::renderPartyCards, this::handleError);
     }
 
     private void setup(){
@@ -41,23 +43,27 @@ public class ShowMoreParty extends AppCompatActivity {
         gridView.setAdapter(adapter);
     }
 
+    private void handleError(Exception e){
+        Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show();
+    }
+
     public void goToDescriptionParty(PartyAdapter.Card party){
         Intent intent = new Intent(this, PartyDetailActivity.class);
+
+        intent.putExtra("PARTY_ID", party.id);
+
         startActivity(intent);
     }
 
-    private void initialFetch(){
-        try {
-            addCards(GetPartiesUseCase
-                    .GetParties()
+    private void renderPartyCards(List<PartyEntity> parties){
+            addCards(parties
                     .stream()
-                    .map(x -> new PartyAdapter.Card(x.name, x.type, x.id))
+                    .map(x -> new PartyAdapter.Card(x.id, x.name, x.type, x.date))
                     .collect(Collectors.toList()));
-        } catch (Exception e) {
-            runOnUiThread(() ->
-                    Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show()
-            );
-        }
+    }
+
+    private List<PartyEntity> fetchParties() throws OrganizartyAPIException, IOException {
+        return GetPartiesUseCase.GetParties();
     }
 
     private void addCards(List<PartyAdapter.Card> cards){

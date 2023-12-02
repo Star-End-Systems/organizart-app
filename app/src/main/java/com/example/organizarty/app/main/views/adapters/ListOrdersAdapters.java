@@ -13,7 +13,6 @@ import androidx.cardview.widget.CardView;
 
 import com.example.organizarty.R;
 import com.example.organizarty.app.party.entities.OrderEntity;
-import com.google.android.material.card.MaterialCardView;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -64,7 +63,7 @@ public class ListOrdersAdapters {
                             color = Color.GRAY;
                             imgIcon.setImageResource(R.drawable.look);
                             break;
-                        case ACCEPTED:
+                        case ACCEPT:
                             imgIcon.setImageResource(R.drawable.aceito);
                             color = Color.parseColor("#2AD861");
                             break;

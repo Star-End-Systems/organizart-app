@@ -14,7 +14,8 @@ public class PartyEntity {
     public PartyEntity(String id, String name, String date, PartyType type,List<OrderEntity> orders){
         this.id = id;
         this.name = name;
-        this.type = type;
+        this.type = type ;
+
         this.orders = orders;
         this.date = date;
     }

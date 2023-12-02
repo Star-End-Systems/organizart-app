@@ -3,9 +3,9 @@ package com.example.organizarty.enums;
 import androidx.annotation.NonNull;
 
 public enum ItemType {
-    FOOD("Comida"),
-    SERVICE("Serviço"),
-    DECORATION("Decoração");
+    Food("Comida"),
+    Service("Serviço"),
+    Decoration("Decoração");
 
     private final String name;
 

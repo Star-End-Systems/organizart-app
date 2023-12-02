@@ -20,8 +20,11 @@ import com.example.organizarty.app.party.views.activities.PartyDetailActivity;
 import com.example.organizarty.app.party.views.activities.ShowMoreParty;
 import com.example.organizarty.app.party.views.activities.YourOrders;
 import com.example.organizarty.app.party.views.adapters.OrderCard;
+import com.example.organizarty.exceptions.OrganizartyAPIException;
+
 import static com.example.organizarty.utils.Async.Fetcher.async;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -31,19 +34,13 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        async(this::setupPartyCards);
-        setupPartyCards();
-        setupOrderCards();
+
+        async(this::setupPartyCards, this::renderpartyCards, this::handleError);
+        async(this::setupOrderCards, this::renderOrderCards, this::handleError);
     }
 
-    private void setupPartyCards()
-    {
-        try {
-            List<PartyEntity> party = GetPartiesUseCase.GetParties();
-            renderpartyCards(party);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    private List<PartyEntity> setupPartyCards() throws OrganizartyAPIException, IOException {
+        return GetPartiesUseCase.GetParties();
     }
 
     private void renderpartyCards(List<PartyEntity> parties){
@@ -51,24 +48,39 @@ public class HomeActivity extends AppCompatActivity {
             LinearLayout linear = findViewById(R.id.home_your_parties);
             ListPartiesAdapter
                     .getCards(this, parties, this::goToDescriptionParty)
-                    .forEach((a) -> {
-                        runOnUiThread(() -> linear.addView(a));
-                    });
+                    .forEach(linear::addView);
         });
     }
 
-    private void setupOrderCards(){
-        LinearLayout linear = findViewById(R.id.home_order_list);
+    private void handleError(Exception e){
+        runOnUiThread( () ->
+                Toast.makeText(this, e.getMessage(), Toast.LENGTH_LONG).show()
+        );
+    }
 
-        List<OrderEntity> orders = GetOrdersUseCase.execute().stream().limit(2).collect(Collectors.toList());
+    private List<OrderEntity> setupOrderCards() throws OrganizartyAPIException, IOException {
+         return GetOrdersUseCase.execute()
+                 .stream()
+                 .limit(2)
+                 .collect(Collectors.toList());
+    }
 
-        ListOrdersAdapters
-                .getCards(this, orders, this::goToYourOrders)
-                .forEach(linear::addView);
+    private void renderOrderCards(List<OrderEntity> orders){
+        runOnUiThread(() -> {
+            LinearLayout linear = findViewById(R.id.home_order_list);
+
+            ListOrdersAdapters
+                    .getCards(this, orders, this::goToYourOrders)
+                    .forEach(linear::addView);
+        });
+
     }
 
     public void goToDescriptionParty(PartyEntity party){
         Intent intent = new Intent(this, PartyDetailActivity.class);
+
+        intent.putExtra("PARTY_ID", party.id);
+
         startActivity(intent);
     }
 
