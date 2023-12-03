@@ -18,6 +18,9 @@ public class NavComponents {
         TextView txtlogoff = context.findViewById(R.id.nav_logoff);
 
         UserEntity user = preferences.readOrganizartyAuthToken();
+        String firstName = user.fullname.split(" ")[0];
+
+        txtname.setText(firstName);
 
         txtlogoff.setOnClickListener(_v ->{
                 preferences.clearOrganizartyUserInfo();
@@ -28,6 +31,5 @@ public class NavComponents {
             }
         );
 
-        txtname.setText(user.fullname);
     }
 }
