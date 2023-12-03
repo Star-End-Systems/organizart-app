@@ -60,20 +60,20 @@ public class ListOrdersAdapters {
                     switch (order.status){
                         case WAITING:
                         case PENDING:
-                            color = Color.GRAY;
-                            imgIcon.setImageResource(R.drawable.look);
+                            color = Color.parseColor("#FF9200");
+                            imgIcon.setImageResource(R.drawable.ic_pendente);
                             break;
                         case ACCEPT:
                             imgIcon.setImageResource(R.drawable.aceito);
                             color = Color.parseColor("#2AD861");
                             break;
                         case REFUSED:
-                            color = Color.RED;
-                            imgIcon.setImageResource(R.drawable.excluir);
+                            color = Color.parseColor("#E05252");
+                            imgIcon.setImageResource(R.drawable.negado);
                             break;
                     }
 
-                    card.setBackgroundColor(color);
+                    card.setCardBackgroundColor(color);
 
                     return cardView;
                 })

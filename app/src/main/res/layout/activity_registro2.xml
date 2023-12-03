@@ -67,25 +67,14 @@
 
     <ImageView
         android:id="@+id/imageView25"
-        android:layout_width="49dp"
-        android:layout_height="63dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/img_linha"
-        app:layout_constraintStart_toStartOf="@+id/img_linha"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157"
-        app:srcCompat="@drawable/macomaco" />
-
-    <ImageView
-        android:id="@+id/img_linha"
-        android:layout_width="175dp"
-        android:layout_height="6dp"
-        android:src="@drawable/enfeite_login"
+        android:layout_width="89dp"
+        android:layout_height="89dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.013" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.168"
+        app:srcCompat="@drawable/macaquinho" />
 
     <TextView
         android:id="@+id/textView"
@@ -97,11 +86,11 @@
         android:textColor="#878585"
         android:textSize="26dp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/register_email"
         app:layout_constraintEnd_toEndOf="@+id/imageView25"
-        app:layout_constraintHorizontal_bias="0.405"
         app:layout_constraintStart_toStartOf="@+id/imageView25"
-        app:layout_constraintTop_toBottomOf="@+id/imageView25" />
-
+        app:layout_constraintTop_toBottomOf="@+id/imageView25"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/register_email"

@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="1dp"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="3dp"
             android:layout_marginEnd="1dp"
             android:onClick="goToMorePartie"
             app:layout_constraintEnd_toEndOf="parent"
@@ -137,14 +137,12 @@
                 android:id="@+id/imageView3"
                 android:layout_width="212dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="35dp"
                 android:src="@drawable/or_gani"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.451"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.058" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout5"
@@ -190,7 +188,6 @@
                 android:layout_marginEnd="24dp"
                 app:layout_constraintBottom_toBottomOf="@+id/lbl_festas2"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/lbl_festas2"
                 app:srcCompat="@drawable/show_more" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -198,7 +195,8 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout6"
             android:layout_width="409dp"
-            android:layout_height="145dp"
+            android:layout_height="85dp"
+            android:layout_marginStart="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
@@ -394,14 +392,13 @@
             android:id="@+id/home_order_list"
             android:layout_width="407dp"
             android:layout_height="287dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="2dp"
             android:gravity="center_horizontal"
             android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7"></LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:layout_constraintVertical_bias="0.154"></LinearLayout>
 
         <TextView
             android:id="@+id/textView7"
@@ -414,6 +411,18 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView7"
+            app:layout_constraintEnd_toStartOf="@+id/textView7"
+            app:layout_constraintHorizontal_bias="0.914"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView7"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_notificacao" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -40,6 +40,8 @@ public class OrderAdapter extends ArrayAdapter<OrderCard> {
         TextView txtType = convertView.findViewById(R.id.order_card_type);
         ImageView imgStatusColor = convertView.findViewById(R.id.order_card_status_color);
 
+
+
         txtName.setText(order.name);
         txtDescription.setText(order.description);
         txtStatus.setText(order.status.toString());
@@ -50,13 +52,14 @@ public class OrderAdapter extends ArrayAdapter<OrderCard> {
         switch (order.status){
             case WAITING:
             case PENDING:
-                color = Color.GRAY;
+
+                color = Color.parseColor("#FF9200");
                 break;
             case ACCEPT:
                 color = Color.parseColor("#2AD861");
                 break;
             case REFUSED:
-                color = Color.RED;
+                color = Color.parseColor("#E05252");
                 break;
         }
 
