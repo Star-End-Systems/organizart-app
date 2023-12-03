@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.organizarty.EmptyHome;
 import com.example.organizarty.R;
 import com.example.organizarty.app.main.views.adapters.ListOrdersAdapters;
 import com.example.organizarty.app.main.views.adapters.ListPartiesAdapter;
@@ -70,8 +71,17 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void goToEmpty(){
+        Intent intent = new Intent(this, EmptyHome.class);
+        startActivity(intent);
+    }
+
     private void renderpartyCards(List<PartyEntity> parties){
         runOnUiThread(() -> {
+            if(parties.isEmpty()){
+                goToEmpty();
+                return;
+            }
             LinearLayout linear = findViewById(R.id.home_your_parties);
             ListPartiesAdapter
                     .getCards(this, parties, this::goToDescriptionParty)

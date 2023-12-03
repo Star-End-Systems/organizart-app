@@ -105,7 +105,8 @@ public class PartyDetailActivity extends AppCompatActivity {
 
         txtName.setText(party.name);
         txtType.setText(party.type.toString());
-        txtId.setText(party.id);
+        String id = party.id.split("-")[0];
+        txtId.setText(id);
     }
 
     private void renderOrders(List<OrderEntity> orders){

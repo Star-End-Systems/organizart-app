@@ -91,31 +91,42 @@
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="100dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="Detalhes Festa"
             android:textColor="#848484"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/img_linha"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_linha"
+            android:layout_width="100dp"
+            android:layout_height="9dp"
+            android:src="@drawable/fundo_festa3"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <TextView
             android:id="@+id/party_detail_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="Chá de Frauda"
             android:textColor="#9F9D9D"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintHorizontal_bias="0.454"
@@ -130,20 +141,32 @@
             android:fontFamily="@font/inter_extrabold"
             android:text="Cha de bebe"
             android:textColor="#848484"
-            android:textSize="14dp"
+            android:textSize="12dp"
             app:layout_constraintEnd_toEndOf="@+id/party_detail_name"
             app:layout_constraintHorizontal_bias="0.493"
             app:layout_constraintStart_toStartOf="@+id/party_detail_name"
             app:layout_constraintTop_toBottomOf="@+id/party_detail_name" />
 
         <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:fontFamily="@font/inter_extrabold"
+            android:text="Quantidade"
+            android:textColor="#7c7c7c"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView14"
+            app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+        <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="36dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="Categoria"
-            android:textColor="#2C2C2C"
+            android:textColor="#7c7c7c"
             android:textSize="14dp"
             app:layout_constraintBottom_toBottomOf="@+id/textView15"
             app:layout_constraintStart_toStartOf="parent" />
@@ -153,62 +176,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="56dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="4dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="Status"
-            android:textColor="#2C2C2C"
+            android:textColor="#7c7c7c"
             android:textSize="14dp"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.181"
+            app:layout_constraintHorizontal_bias="0.278"
             app:layout_constraintStart_toEndOf="@+id/textView15" />
-
-        <TextView
-            android:id="@+id/textView15"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="64dp"
-            android:fontFamily="@font/inter_extrabold"
-            android:text="Quantidade"
-            android:textColor="#2C2C2C"
-            android:textSize="14dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView14"
-            app:layout_constraintStart_toEndOf="@+id/textView13" />
 
         <TextView
             android:id="@+id/party_detail_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/inter_extrabold"
             android:text="04167"
             android:textColor="#CEC7C7"
             android:textSize="14dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-        <ImageView
-            android:id="@+id/img_linha"
-            android:layout_width="194dp"
-            android:layout_height="7dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="8dp"
-            android:src="@drawable/fundo_festa3"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/party_detail_type"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/card_borda_branca" />
 
         <ImageView
@@ -224,7 +226,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
             android:layout_width="0dp"
-            android:layout_height="259dp"
+            android:layout_height="210dp"
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
             android:background="@android:color/darker_gray"
@@ -237,11 +239,41 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:verticalSpacing="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="80dp" />
+                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/circulo_rosa"
+            tools:layout_editor_absoluteX="257dp"
+            tools:layout_editor_absoluteY="71dp" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="121dp"
+            android:layout_height="48dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/textView"
+            app:srcCompat="@drawable/circulo_rosa" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="Valor total"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+            app:layout_constraintEnd_toEndOf="@+id/imageView12"
+            app:layout_constraintStart_toStartOf="@+id/imageView12"
+            app:layout_constraintTop_toTopOf="@+id/imageView12" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
