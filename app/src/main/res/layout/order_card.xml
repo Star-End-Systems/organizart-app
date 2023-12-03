@@ -27,11 +27,7 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-<!--            <ImageView-->
-<!--                android:id="@+id/img_pokemon"-->
-<!--                android:layout_width="80dp"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:src="@drawable/bulbasaur" />-->
+
 
             <TextView
                 android:id="@+id/your_parties_card_type"
@@ -51,22 +47,6 @@
                 android:text="--"
                 android:textColor="#808080"
                 android:textSize="16sp" />
-
-            <!--            <ImageView-->
-            <!--                android:id="@+id/pokemon_type_1"-->
-            <!--                android:layout_width="20dp"-->
-            <!--                android:layout_height="20dp"-->
-            <!--                android:layout_marginLeft="-13dp"-->
-            <!--                android:layout_marginTop="10dp"-->
-            <!--                android:src="@drawable/planta" />-->
-
-            <!--            <ImageView-->
-            <!--                android:id="@+id/pokemon_type_2"-->
-            <!--                android:layout_width="20dp"-->
-            <!--                android:layout_height="20dp"-->
-            <!--                android:layout_marginLeft="15dp"-->
-            <!--                android:layout_marginTop="-20dp"-->
-            <!--                android:src="@drawable/venenoso" />-->
 
 
         </LinearLayout>
