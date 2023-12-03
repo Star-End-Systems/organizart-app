@@ -25,7 +25,7 @@ public class UserEntity {
         this.fullname = name;
         this.email = email;
         this.token = token;
-        this.username = "";
+        this.username = name;
         this.location = "";
         this.cpf = "";
         this.image = "";

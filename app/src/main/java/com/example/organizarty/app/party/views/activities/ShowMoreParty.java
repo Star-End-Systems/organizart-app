@@ -1,5 +1,6 @@
 package com.example.organizarty.app.party.views.activities;
 
+import static com.example.organizarty.app.components.NavComponents.setupNav;
 import static com.example.organizarty.utils.Async.Fetcher.async;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -80,6 +81,7 @@ public class ShowMoreParty extends AppCompatActivity {
 
     private List<PartyEntity> fetchParties() throws OrganizartyAPIException, IOException, AnauthenticatedUserException {
         UserEntity user = _preferences.readOrganizartyAuthToken();
+        setupNav(this, _preferences);
         return new GetPartiesUseCase(user.token).GetParties();
     }
 

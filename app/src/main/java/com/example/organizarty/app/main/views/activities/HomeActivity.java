@@ -7,6 +7,7 @@ import android.view.View;
 
 import android.os.Bundle;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.organizarty.R;
@@ -26,6 +27,7 @@ import com.example.organizarty.exceptions.AnauthenticatedUserException;
 import com.example.organizarty.exceptions.OrganizartyAPIException;
 import com.example.organizarty.utils.storage.PreferencesUtils;
 
+import static com.example.organizarty.app.components.NavComponents.setupNav;
 import static com.example.organizarty.utils.Async.Fetcher.async;
 
 import java.io.IOException;
@@ -35,6 +37,7 @@ import java.util.stream.Collectors;
 
 public class HomeActivity extends AppCompatActivity {
     private PreferencesUtils _preferences;
+    private UserEntity _user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,11 +52,17 @@ public class HomeActivity extends AppCompatActivity {
 
     private void setup(){
         _preferences = new PreferencesUtils(this);
+
+        try {
+            _user = _preferences.readOrganizartyAuthToken();
+            setupNav(this, _preferences);
+        } catch (AnauthenticatedUserException e) {
+            goToLogin();
+        }
     }
 
     private List<PartyEntity> setupPartyCards() throws OrganizartyAPIException, IOException, AnauthenticatedUserException {
-        UserEntity user = _preferences.readOrganizartyAuthToken();
-        return new GetPartiesUseCase(user.token).GetParties();
+        return new GetPartiesUseCase(_user.token).GetParties();
     }
 
     private void goToLogin(){
@@ -82,8 +91,8 @@ public class HomeActivity extends AppCompatActivity {
         );
     }
 
-    private List<OrderEntity> setupOrderCards() throws OrganizartyAPIException, IOException {
-         return GetOrdersUseCase.execute()
+    private List<OrderEntity> setupOrderCards() throws OrganizartyAPIException, IOException, AnauthenticatedUserException {
+         return new GetOrdersUseCase(_user.token).execute()
                  .stream()
                  .limit(2)
                  .collect(Collectors.toList());

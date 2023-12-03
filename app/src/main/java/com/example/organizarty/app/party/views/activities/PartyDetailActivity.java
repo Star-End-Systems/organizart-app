@@ -24,6 +24,7 @@ import com.example.organizarty.exceptions.NotFoundException;
 import com.example.organizarty.exceptions.OrganizartyAPIException;
 import com.example.organizarty.utils.storage.PreferencesUtils;
 
+import static com.example.organizarty.app.components.NavComponents.setupNav;
 import static com.example.organizarty.utils.Async.Fetcher.async;
 
 import java.io.IOException;
@@ -62,6 +63,7 @@ public class PartyDetailActivity extends AppCompatActivity {
 
     PartyEntity initialFetch() throws OrganizartyAPIException, IOException, NotFoundException, AnauthenticatedUserException {
         UserEntity   user = _preferences.readOrganizartyAuthToken();
+        setupNav(this, _preferences);
         Optional<PartyEntity> p = new GetPartiesUseCase(user.token).GetPartyFromId(PartyId);
 
         if(!p.isPresent()){
@@ -76,8 +78,9 @@ public class PartyDetailActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private List<OrderEntity> fetchOrderCards() throws OrganizartyAPIException, IOException {
-        return GetOrdersUseCase.execute();
+    private List<OrderEntity> fetchOrderCards() throws OrganizartyAPIException, IOException, AnauthenticatedUserException {
+        UserEntity user = _preferences.readOrganizartyAuthToken();
+        return new GetOrdersUseCase(user.token).execute();
     }
 
     void renderScreen(PartyEntity party){

@@ -15,8 +15,11 @@ import com.example.organizarty.app.main.views.activities.HomeActivity;
 import com.example.organizarty.app.party.usecases.GetOrdersUseCase;
 import com.example.organizarty.app.party.views.adapters.OrderAdapter;
 import com.example.organizarty.app.party.views.adapters.OrderCard;
+import com.example.organizarty.app.users.entities.UserEntity;
 import com.example.organizarty.exceptions.OrganizartyAPIException;
+import com.example.organizarty.utils.storage.PreferencesUtils;
 
+import static com.example.organizarty.app.components.NavComponents.setupNav;
 import static com.example.organizarty.utils.Async.Fetcher.*;
 
 import java.io.IOException;
@@ -26,6 +29,8 @@ import java.util.stream.Collectors;
 
 public class YourOrders extends AppCompatActivity {
     private ArrayAdapter<OrderCard> adapter;
+
+    private PreferencesUtils _preferences;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,11 +45,15 @@ public class YourOrders extends AppCompatActivity {
         GridView gridView = findViewById(R.id.all_orders_grid);
 
         gridView.setAdapter(adapter);
+
+        _preferences = new PreferencesUtils(this);
     }
 
     private void initialFetch() {
         try{
-            addCards(GetOrdersUseCase
+            UserEntity user = _preferences.readOrganizartyAuthToken();
+            setupNav(this, _preferences);
+            addCards(new GetOrdersUseCase(user.token)
                     .execute()
                     .stream()
                     .map(x -> new OrderCard(x.name, x.id,x.type, x.status))

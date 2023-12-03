@@ -68,7 +68,7 @@ public class PreferencesUtils {
         }
 
         String name = readFromPreferences(ORGANIZARTY_USER_NAME);
-        if(name == null){
+        if(name.isEmpty()){
             clearOrganizartyUserInfo();
             throw new AnauthenticatedUserException();
         }
