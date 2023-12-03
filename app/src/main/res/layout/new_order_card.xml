@@ -14,7 +14,6 @@
         android:onClick="goToYourOrders"
         app:cardBackgroundColor="#E05252"
         app:cardCornerRadius="20dp"
-        app:cardElevation="10dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="6dp"
         tools:layout_editor_absoluteY="0dp">
