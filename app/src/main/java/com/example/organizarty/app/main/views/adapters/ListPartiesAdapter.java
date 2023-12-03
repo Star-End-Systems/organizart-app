@@ -43,13 +43,11 @@ public class ListPartiesAdapter {
             }
             TextView txtName = cardView.findViewById(R.id.party_card_name);
             TextView txtType = cardView.findViewById(R.id.party_card_type);
-            TextView txtDate = cardView.findViewById(R.id.party_card_date);
 
             ImageView imgIcon = cardView.findViewById(R.id.party_card_icon);
             CardView card = cardView.findViewById(R.id.party_card);
 
             txtName.setText(party.name);
-            txtDate.setText(party.date);
             txtType.setText(party.name);
 
             cardView.setOnClickListener(view -> callback.run(party) );

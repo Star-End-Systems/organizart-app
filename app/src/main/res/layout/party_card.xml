@@ -50,16 +50,6 @@
             android:textColor="#AFA9A9"
             android:textSize="5dp" />
 
-        <TextView
-            android:id="@+id/party_card_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="104dp"
-            android:layout_marginTop="78dp"
-            android:text="30/11/2023"
-            android:textColor="#AFA9A9"
-            android:textSize="8dp" />
-
 
     </androidx.cardview.widget.CardView>
 

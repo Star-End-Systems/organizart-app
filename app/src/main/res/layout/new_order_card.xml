@@ -56,12 +56,5 @@
             android:textColor="@color/white"
             android:textSize="9dp" />
 
-        <ImageView
-            android:layout_width="41dp"
-            android:layout_height="41dp"
-            android:layout_marginLeft="175dp"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/ic_mesa" />
-
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
