@@ -80,9 +80,11 @@ public class HomeActivity extends AppCompatActivity {
         runOnUiThread(() -> {
             if(parties.isEmpty()){
                 goToEmpty();
+                finish();
                 return;
             }
             LinearLayout linear = findViewById(R.id.home_your_parties);
+            linear.removeAllViews();
             ListPartiesAdapter
                     .getCards(this, parties, this::goToDescriptionParty)
                     .forEach(linear::addView);
@@ -112,6 +114,7 @@ public class HomeActivity extends AppCompatActivity {
         runOnUiThread(() -> {
             LinearLayout linear = findViewById(R.id.home_order_list);
 
+            linear.removeAllViews();
             ListOrdersAdapters
                     .getCards(this, orders, this::goToYourOrders)
                     .forEach(linear::addView);

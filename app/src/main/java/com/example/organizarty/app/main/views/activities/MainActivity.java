@@ -8,11 +8,15 @@ import android.os.Handler;
 import android.widget.Toast;
 
 
+import com.example.organizarty.EmptyHome;
 import com.example.organizarty.R;
+import com.example.organizarty.app.party.entities.PartyEntity;
 import com.example.organizarty.app.party.usecases.GetPartiesUseCase;
 import com.example.organizarty.app.users.entities.UserEntity;
 import com.example.organizarty.app.users.views.activities.account.LoginActivity;
 import com.example.organizarty.utils.storage.PreferencesUtils;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private PreferencesUtils _preferences;
@@ -37,21 +41,29 @@ public class MainActivity extends AppCompatActivity {
     {
         try{
             UserEntity user = _preferences.readOrganizartyAuthToken();
-             new GetPartiesUseCase(user.token).GetParties();
+            List<PartyEntity> parties = new GetPartiesUseCase(user.token).GetParties();
+
+            if(parties.isEmpty()){
+                runOnUiThread(() -> {
+                    goToEmpty();
+                    finish();
+                });
+                return false;
+            }
+
             return true;
         } catch (Exception e){
+            runOnUiThread(() -> {
+                goToLogin();
+                finish();
+            });
+
             return false;
         }
     }
 
     private void goToLoggedState(boolean isLogged){
-        runOnUiThread(() -> {
-            if(isLogged){
-                goToHome();
-            } else{
-                goToLogin();
-            }
-        });
+
     }
 
     private void goToLogin(){
@@ -59,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    private void goToEmpty(){
+        Intent intent = new Intent(this, EmptyHome.class);
+        startActivity(intent);
+    }
+
 
     private void goToHome(){
         Intent intent = new Intent(this, HomeActivity.class);

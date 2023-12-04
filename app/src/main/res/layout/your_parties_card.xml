@@ -9,9 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="94dp"
         android:layout_rowWeight="1"
-        android:layout_columnWeight="1"
+        android:layout_columnWeight="0"
         android:layout_margin="12dp"
-        app:cardCornerRadius="16dp"
         tools:ignore="MissingConstraints">
 
         <androidx.constraintlayout.widget.ConstraintLayout

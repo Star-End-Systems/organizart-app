@@ -18,6 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/imageView2"
             android:layout_width="42dp"
             android:layout_height="42dp"
             android:layout_marginBottom="4dp"
@@ -28,6 +29,7 @@
             app:layout_constraintTop_toTopOf="@+id/textHello" />
 
         <TextView
+            android:id="@+id/textUsername"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="12dp"
@@ -60,16 +62,26 @@
             android:layout_height="42dp"
             android:layout_marginEnd="3dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/menus"
+            android:src="@drawable/enfeite_menu"
             app:layout_constraintBottom_toBottomOf="@+id/imageView2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.912"
             app:layout_constraintStart_toEndOf="@+id/textUsername"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6"
-            app:srcCompat="@drawable/enfeite_menu" />
+            app:layout_constraintVertical_bias="0.6" />
 
-
+        <TextView
+            android:id="@+id/nav_logoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Sair da conta"
+            android:textColor="@color/white"
+            android:textSize="9sp"
+            app:layout_constraintEnd_toEndOf="@+id/textUsername"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textHello"
+            app:layout_constraintTop_toBottomOf="@+id/textHello" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -192,8 +204,10 @@
                 android:src="@drawable/ic_coroa"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView9"
                 app:layout_constraintEnd_toEndOf="@+id/imageView9"
+                app:layout_constraintHorizontal_bias="0.481"
                 app:layout_constraintStart_toStartOf="@+id/imageView9"
-                app:layout_constraintTop_toTopOf="@+id/imageView9" />
+                app:layout_constraintTop_toTopOf="@+id/imageView9"
+                app:layout_constraintVertical_bias="0.481" />
 
             <TextView
                 android:id="@+id/textView4"
@@ -287,30 +301,15 @@
 
         <ImageView
             android:id="@+id/imageView13"
-            android:layout_width="46dp"
-            android:layout_height="59dp"
-            android:layout_marginBottom="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView21"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.979"
-            app:srcCompat="@drawable/logo_2" />
-
-        <TextView
-            android:id="@+id/textView21"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="80dp"
-            android:fontFamily="@font/inter_bold"
-            android:gravity="center|center_vertical"
-            android:text="Poxa, você ainda não criou nenhuma festa..."
-            android:textColor="#c4c4c4"
+            android:layout_width="294dp"
+            android:layout_height="93dp"
             app:layout_constraintBottom_toTopOf="@+id/constraintLayout4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.672"
+            app:srcCompat="@drawable/semfesta_img" />
 
         <ImageView
             android:id="@+id/imageView30"
