@@ -55,14 +55,9 @@ public class PartyAdapter extends ArrayAdapter<PartyAdapter.Card> {
         txtType.setText(card.type.toString());
         txtDate.setText(card.date);
 
-        switch (card.type){
-            case BabyTea:
-                break;
-            case Casamento:
-                break;
-            case Aniversario:
-                break;
-        }
+        int image = card.type.getImage();
+
+        imgType.setImageResource(image);
 
         convertView.setOnClickListener(_v -> onClickListener.call(card));
 

@@ -39,7 +39,7 @@ public class ListPartiesAdapter {
             View cardView = inflater.inflate(R.layout.party_card, null);
 
             if(party.type == null){
-                party.type = PartyType.BabyTea;
+                party.type = PartyType.chadebebe;
             }
             TextView txtName = cardView.findViewById(R.id.party_card_name);
             TextView txtType = cardView.findViewById(R.id.party_card_type);
@@ -59,20 +59,23 @@ public class ListPartiesAdapter {
             });
 
             int color = 0;
-            int image = 0;
+            int image = party.type.getImage();
 
             switch (party.type){
-                case BabyTea:
-                    color = Color.parseColor("#A882B5");
-                    image = R.drawable.urso;
+                case chadebebe:
+                    color = Color.parseColor("#CB34FF");
                     break;
-                case Casamento:
-                    color = Color.GREEN;
-                    image = R.drawable.drink;
+                case aniversario:
+                    color = Color.parseColor("#FF0084");
                     break;
-                case Aniversario:
-                    color = Color.YELLOW;
-                    image = R.drawable.bolo;
+                case happyHour:
+                    color = Color.parseColor("#00ff67");
+                    break;
+                case debutante:
+                    color = Color.parseColor("#4c4f56");
+                    break;
+                case casamento:
+                    color = Color.parseColor("#b4a385");
                     break;
             }
 

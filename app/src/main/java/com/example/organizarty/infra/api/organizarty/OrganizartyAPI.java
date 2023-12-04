@@ -78,7 +78,7 @@ public class OrganizartyAPI {
 
             try{
                 PartyEntity party = gson.fromJson(body, PartyEntity.class);
-                party.type = PartyType.BabyTea;
+                party.type = PartyType.chadebebe;
                 return Optional.of(party);
             } catch (Exception _e){
                 return Optional.empty();
@@ -108,7 +108,7 @@ public class OrganizartyAPI {
 
             try{
                 PartiesResponse parties = gson.fromJson(body, PartiesResponse.class);
-                return parties.data.stream().peek(x -> x.type = PartyType.BabyTea).collect(Collectors.toList());
+                return parties.data;
             } catch (Exception _e){
                 return new ArrayList<>();
             }

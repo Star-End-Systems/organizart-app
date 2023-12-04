@@ -107,6 +107,10 @@ public class PartyDetailActivity extends AppCompatActivity {
         txtType.setText(party.type.toString());
         String id = party.id.split("-")[0];
         txtId.setText(id);
+
+        int image = party.type.getImage();
+
+        txtImage.setImageResource(image);
     }
 
     private void renderOrders(List<OrderEntity> orders){
