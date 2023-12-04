@@ -78,7 +78,6 @@ public class OrganizartyAPI {
 
             try{
                 PartyEntity party = gson.fromJson(body, PartyEntity.class);
-                party.type = PartyType.chadebebe;
                 return Optional.of(party);
             } catch (Exception _e){
                 return Optional.empty();

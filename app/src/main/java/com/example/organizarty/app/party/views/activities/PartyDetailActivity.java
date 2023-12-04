@@ -105,8 +105,8 @@ public class PartyDetailActivity extends AppCompatActivity {
 
         txtName.setText(party.name);
         txtType.setText(party.type.toString());
-        String id = party.id.split("-")[0];
-        txtId.setText(id);
+        String id = party.id.split("-")[1];
+        txtId.setText("Cód festa: "+id);
 
         int image = party.type.getImage();
 
@@ -117,7 +117,7 @@ public class PartyDetailActivity extends AppCompatActivity {
         runOnUiThread(() -> {
             List<PartyOrderCard> cards = orders
                     .stream()
-                    .map(x -> new PartyOrderCard(x.name, x.quantity, x.status))
+                    .map(x -> new PartyOrderCard(x.name, x.quantity, x.status, x.type.getImage()))
                     .collect(Collectors.toList());
 
 

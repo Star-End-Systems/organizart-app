@@ -32,13 +32,15 @@ public class PartyOrderAdapter extends ArrayAdapter<PartyOrderCard> {
         PartyOrderCard card = getItem(pos);
         assert card != null;
 
-        TextView txtName = convertView.findViewById(R.id.party_order_name);
+        ImageView txtImage = convertView.findViewById(R.id.ic_categoria);
         TextView txtNote = convertView.findViewById(R.id.party_order_note);
         TextView txtStatus = convertView.findViewById(R.id.party_order_status);
 
-        txtName.setText(card.name);
+        txtImage.setImageResource(card.image);
         txtNote.setText(String.valueOf(card.quantity));
         txtStatus.setText(card.status.toString());
+
+
 
         return convertView;
     }

@@ -122,14 +122,14 @@
             android:id="@+id/party_detail_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="59dp"
             android:fontFamily="@font/inter_extrabold"
-            android:text="Chá de Frauda"
+            android:text="Carregando..."
             android:textColor="#9F9D9D"
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintHorizontal_bias="0.518"
             app:layout_constraintStart_toStartOf="@+id/imageView"
             app:layout_constraintTop_toBottomOf="@+id/img_linha" />
 
@@ -139,7 +139,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/inter_extrabold"
-            android:text="Cha de bebe"
             android:textColor="#848484"
             android:textSize="12dp"
             app:layout_constraintEnd_toEndOf="@+id/party_detail_name"
@@ -192,7 +191,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/inter_extrabold"
-            android:text="04167"
+            android:text="--"
             android:textColor="#CEC7C7"
             android:textSize="14dp"
             android:textStyle="bold"
@@ -207,7 +206,7 @@
             android:layout_marginTop="4dp"
             app:layout_constraintBottom_toTopOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.467"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/party_detail_type"
             app:layout_constraintVertical_bias="0.0"
@@ -220,8 +219,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="@+id/imageView"
             app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView"
-            app:srcCompat="@drawable/urso" />
+            app:layout_constraintTop_toTopOf="@+id/imageView" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/constraintLayout3"
@@ -229,7 +227,7 @@
             android:layout_height="210dp"
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
-            android:background="@android:color/darker_gray"
+            android:background="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
