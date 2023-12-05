@@ -102,10 +102,14 @@ public class PartyDetailActivity extends AppCompatActivity {
         TextView txtType = findViewById(R.id.party_detail_type);
         TextView txtId = findViewById(R.id.party_detail_id);
         ImageView txtImage = findViewById(R.id.party_detail_image);
+        TextView txtPrice  = findViewById(R.id.party_detail_price);
+
+        String id = party.id.split("-")[1];
+        String price = String.format("R$ %.2f", party.price);
 
         txtName.setText(party.name);
         txtType.setText(party.type.toString());
-        String id = party.id.split("-")[1];
+        txtPrice.setText(price);
         txtId.setText("Cód festa: "+id);
 
         int image = party.type.getImage();
